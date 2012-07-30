@@ -17,6 +17,8 @@
 	<link rel="stylesheet" href="extensions/status/deck.status.css">
 	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
 	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+	<link rel="stylesheet" href="extensions/codemirror/deck.codemirror.css">
+	<link rel="stylesheet" href="extensions/codemirror/themes/default.css">
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
 	<link rel="stylesheet" href="themes/style/web-2.0.css">
@@ -35,6 +37,17 @@
 			float:right;
 			width:48%;
 			padding:2%;
+		}
+
+		.leftThreeCol, .middleThreeCol {
+			float:left;
+			width: 33%;
+			padding: 2%;
+		}
+		.rightThreeCol {
+			float:right;
+			width: 31%;
+			padding: 2%;
 		}
 	</style>
 	
@@ -56,135 +69,195 @@
 			Steve Workman, Mobile development lead at PA Consulting
 		</li>
 		<li class="slide">
-			Organiser of <a href="http://londonwebstandards.org">London Web Standards</a> for the last two years
+			<img src="images/lws_logo.png" alt="London Web Standards" style="float:right;">Organiser of <a href="http://londonwebstandards.org">London Web Standards</a> for the last two years
 		</li>
 		<li class="slide">
-			I make cool and innovative components with CSS, like the <a href="http://www.steveworkman.com/bookshelf">CSS3 bookshelf</a>
+			I make cool little components with CSS, like the <a href="http://www.steveworkman.com/bookshelf">CSS3 bookshelf</a>
 		</li>
 	</ul>
 </section>
 
 <section class="slide">
-	<h2>A Brief History of CSS</h2>
-	<ul>
-		<li class="slide"><strong>CSS 1</strong> December 1996, separated content from presentation. Basic font properties, colours, alignment, margins, padding and borders</li>
-		<li class="slide"><strong>CSS 2</strong> May 1998, built on previous spec with new positioning methods and media types<br/>
-			<strong>CSS 2.1</strong> clarified the CSS 2 spec, finally becoming a recommendation as late as June 2011.</li>
-		<li class="slide"><strong>CSS 3</strong> modularised features forming part of a larger specification. Modules implemented as they're designed by their authors</li>
-	</ul>
-	<div class="slide">
-		<p class="leftCol"><img style="width:100%" alt="Old website"/></p>
-		<p class="rightCol"><img style="width:100%" alt="New website"/></p>
+	<h2>CSS has evolved slowly</h2>
+	<div class=" slide">
+		<div class="leftThreeCol">
+			<h3>2001</h3>
+			<img src="images/bbc-news-2001.png" style="width:100%" alt="BBC News 2001"/>
+			<p>Lines of CSS: <strong>1493</strong><br/>
+				Total File size: <strong>31.85KB</strong> (1 file)</p>
+		</div>
+	</div>
+	<div class=" slide">
+		<div class="middleThreeCol">
+			<h3>2007</h3>
+			<img src="images/bbc-news-2007.png" style="width:100%" alt="BBC News 2007"/>
+			<p>Lines of CSS: <strong>2270</strong> <em>Up 52%</em><br/>
+				Total File size: <strong>61.93KB</strong> (12 files)</p>
+		</div>
+	</div>
+	<div class=" slide">
+		<div class="rightThreeCol">
+			<h3>2012</h3>
+			<img src="images/bbc-news-2012.png" style="width:100%" alt="BBC News 2012"/>
+			<p>Lines of CSS: <strong>19712</strong> <em>Up 860%!</em><br/>
+				Total File size: <strong>336.30KB</strong> (12 files)</p>
+			<p><em>And now it's accelerating...</em></p>
+		</div>
 	</div>
 </section>
 
 <section class="slide">
-	<h2>Improvement has been slow</h2>
+	<h2>Language improvements move even slower...</h2>
 	<ul>
-		<li>CSS 3 selectors brought new ways to select elements</li>
-		<li>Discussions on improving the syntax beyond selectors have never made it through the CSS Working Group</li>
-		<li><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 and has a small amount of support in Webkit</li>
-		<li>CSS Calculations has basic support in Gecko</li>
+		<li class="slide">CSS 3 selectors brought new ways to select elements</li>
+		<li class="slide">Discussions on improving the syntax beyond selectors have never made it through the CSS Working Group</li>
+		<li class="slide"><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 but is only supported in Webkit nightly builds</li>
+		<li class="slide"><a href="http://www.w3.org/TR/css3-values/">Math functions</a> like calc() have support in Firefox (4+)*, Chrome (19+)* and IE9, and has been a working draft for <a href="http://www.w3.org/TR/2001/WD-css3-values-20010713/">11 years!</a>. It's currently at Last Call.</li>
 	</ul>
-	
-	<div class="slide">
-		<h3>Stylesheets have gotten bigger</h3>
-		<ul>
-			<li>CSS for BBC News website in 2007: <strong>2270 lines in 61.93KB over 12 files</strong></li>
-			<li>CSS for BBC News website in 2012: <strong>19712 lines in 336KB over 12 files</strong> over 5 times bigger download and 8 times the number of lines of code
-			<li>CSS for Twitter Bootstrap: <strong>6490 lines in 128KB</strong>
-		</ul>
-	</div>
 </section>
 
 <section class="slide">
 	<h2>Two come along at once</h2>
-	<div class="leftCol">
-		<p><img style="width:100%" alt="Less CSS"/></p>
-		<ul>
-			<li>Nested rules</li>
-			<li>Variables</li>
-			<li>Calculations</li>
-			<li>Mixins</li>
-			<li>Compression</li>
-		</ul>
-	</div>
-	<div sclass="rightCol">
-		<p><img style="width:100%" alt="SASS"/></p>
-		<ul>
-			<li>Nested rules</li>
-			<li>Variables</li>
-			<li>Calculations</li>
-			<li>Mixins</li>
-			<li>Compression</li>
-		</ul>
+	<div>
+		<div class="leftCol">
+			<p><img src="images/less_logo.png" style="" alt="Less CSS"/></p>
+			<p><img src="images/Sass_Logo.gif" style="" alt="SASS"/></p>
+		</div>
+		<div class="rightCol">
+			<h3>Both feature</h3>
+			<ul class="slide">
+				<li>Nested rules</li>
+				<li>Variables</li>
+				<li>Math functions</li>
+				<li>Extensions</li>
+				<li>Mixins</li>
+				<li>Compression</li>
+				<li>Works with regular CSS</li>
+			</ul>
+		</div>
+		
 	</div>
 </section>
 
 <section class="slide">
-	<h2>Nested rules</h2>
+	<h2>Nesting &amp; Variables</h2>
 	<div class="leftCol">
 		<h3>CSS</h3>
 		<pre><code>
-.outer {
-	border: 1px solid #999;
+section { 
+  margin: 10px;
 }
-.outer p {
-	padding:0 10px;
-	margin: 0 auto;
+section nav { 
+  height: 25px;
 }
-.outer.alert {
-	color:red;
+section nav a, section nav a:visited { 
+  color: #0982C1;
+}
+section nav a:hover, section nav a:focus {
+  text-decoration: underline;
 }
 		</code></pre>
 	</div>
 	<div class="rightCol">
 		<h3>SASS</h3>
 		<pre><code>
-.outer {
-	border: 1px solid #999;
-	p {
-		padding: 0 10px;
-		margin:0 auto;
-	}
-	&.alert {
-		color:red;
-	}
+$linkColor: #0982C1;
+section {
+  margin:10px;
+  nav {
+    height:25px;
+    a, a:visited {
+      color: $linkColor;
+      &:hover, &:focus {
+        text-decoration:underline;
+      }
+    }
+  }
 }
+</code></pre>
 	</div>
 </section>
 
 <section class="slide">
-	<h2>Variables</h2>
-	<div class="leftCol">
+	<h2>Mixins</h2>
+		<div class="slide">
 		<h3>CSS</h3>
-		<pre><code>
-h1,h2,h3 {
-	color:#999;
-	text-shadow: 1px 2px 1px #999, -1px -2px 1px #999,
+		<pre><code>header > nav {
+  background-color: #333;
+  background-image: -moz-linear-gradient(left, #555, #333); // FF 3.6+
+  background-image: -ms-linear-gradient(left, #555, #333); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#555), to(#333)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, #555, #333); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, #555, #333); // Opera 11.10
+  background-image: linear-gradient(left, #555, #333); // Le standard
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
 }
 		</code></pre>
 	</div>
-	<div class="rightCol">
-		<h3>SASS</h3>
-		<pre><code>
-@headingColor: #999;
-h1,h2,h3 {
-	color:@headingColor;
-	text-shadow: 1px 2px 1px @headingColor, -1px -2px 1px @headingColor,
+		<div class="slide">
+		<h3>Less</h3>
+		<pre><code>header > nav {
+	.horizontalGradient(#555, #333);
 }
+		</code></pre>
 	</div>
 </section>
 
-	<div class="rightCol">
-		<h3>SASS</h3>
-		<pre><code>
-@headingColor: #999;
-h1,h2,h3 {
-	color:@headingColor;
-	text-shadow: 1px 2px 1px @headingColor, -1px -2px 1px @headingColor,
-}
+<section class="slide">
+	<h2>Mixins contd...</h2>
+		<h3>Mixins.less</h3>
+		<pre><code>.horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(left, @startColor, @endColor); // Le standard
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
+  }
+		</code></pre>
 	</div>
+</section>
+
+<section class="slide">
+	<h2>Modular CSS</h2>
+	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
+	<ul>
+		<li>Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done</li>
+		<li>Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
+	</ul>
+	<div class="slide">
+	<h4>What's the best thing about SASS?</h4>
+		<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
+			<p>Keeping my code organized in a way I want to for development and then have it output in the most efficient way for the browser.</p>
+			<p><cite>Miles Carmany, Web Developer</cite></p>
+		</blockquote>
+	</div>
+</section>
+<section class="slide">
+	<h2>What do you see as the biggest advantage of using a pre-processor like Scss?</h2>
+	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
+		<p>It streamlines the whole process, and is easier to read and debug. It takes only a few minutes to set up but the time savings are immense.</p>
+		<p><cite>Ghaida Zahran, designer at ZURB</cite></p>
+	</blockquote>
+	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
+		<p>Maintainability and reusability.</p>
+		<p><cite>Jared Hardy, Product Design at Groupon</cite></p>
+	</blockquote>
+</section>
+
+<section class="slide">
+	<h2>Find out more</h2>
+	<p style="text-align:center"><img src="images/less_logo.png" alt="Less CSS"/><a href="http://lesscss.org">Lesscss.org</a></p>
+	<p style="text-align:center"><img src="images/Sass_Logo.gif" alt="SASS"/><a href="http://sass-lang.org">sass-lang.com</a></p>
+	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on modular CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
+</section>
+
+<section class="slide">
+	<h1>Questions?</h1>
 </section>
 
 <!-- End slides. -->
@@ -197,11 +270,12 @@ h1,h2,h3 {
 <a href="#" class="deck-next-link" title="Next">&#8594;</a>
 
 <!-- deck.status snippet -->
+<!--
 <p class="deck-status">
 	<span class="deck-status-current"></span>
 	/
 	<span class="deck-status-total"></span>
-</p>
+</p>-->
 
 <!-- deck.goto snippet -->
 <form action="." method="get" class="goto-form">
@@ -226,9 +300,17 @@ h1,h2,h3 {
 <script src="extensions/hash/deck.hash.js"></script>
 <script src="extensions/menu/deck.menu.js"></script>
 <script src="extensions/goto/deck.goto.js"></script>
-<script src="extensions/status/deck.status.js"></script>
+<!--<script src="extensions/status/deck.status.js"></script>-->
 <script src="extensions/navigation/deck.navigation.js"></script>
 <script src="extensions/scale/deck.scale.js"></script>
+<!-- Codemirror -->
+<script src="extensions/codemirror/codemirror.js"></script>
+<script src="extensions/codemirror/mode/javascript/javascript.js"></script>
+
+<!-- html mode (note html mode requires xml, css and javascript) -->
+<script src="extensions/codemirror/mode/xml/xml.js"></script>
+<script src="extensions/codemirror/mode/css/css.js"></script>
+<script src="extensions/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
