@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=1024, user-scalable=no">
+
+	<title>Making CSS Awesome again</title>
+	
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="core/deck.core.css">
+	
+	<!-- Extension CSS files go here. Remove or add as needed. -->
+	<link rel="stylesheet" href="extensions/goto/deck.goto.css">
+	<link rel="stylesheet" href="extensions/menu/deck.menu.css">
+	<link rel="stylesheet" href="extensions/navigation/deck.navigation.css">
+	<link rel="stylesheet" href="extensions/status/deck.status.css">
+	<link rel="stylesheet" href="extensions/hash/deck.hash.css">
+	<link rel="stylesheet" href="extensions/scale/deck.scale.css">
+
+	<!-- Style theme. More available in /themes/style/ or create your own. -->
+	<link rel="stylesheet" href="themes/style/web-2.0.css">
+	
+	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
+	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
+
+	<!-- Custom styles -->
+	<style type="text/css">
+		.leftCol {
+			float:left;
+			width:48%;
+			padding:2%;
+		}
+		.rightCol {
+			float:right;
+			width:48%;
+			padding:2%;
+		}
+	</style>
+	
+	<!-- Required Modernizr file -->
+	<script src="modernizr.custom.js"></script>
+</head>
+<body class="deck-container">
+
+<!-- Begin slides. Just make elements with a class of slide. -->
+
+<section class="slide" id="title-slide">
+	<h1>Make CSS Awesome Again</h1>
+</section>
+
+<section class="slide">
+	<h2>Who am I</h2>
+	<ul>
+		<li>
+			Steve Workman, Mobile development lead at PA Consulting
+		</li>
+		<li class="slide">
+			Organiser of <a href="http://londonwebstandards.org">London Web Standards</a> for the last two years
+		</li>
+		<li class="slide">
+			I make cool and innovative components with CSS, like the <a href="http://www.steveworkman.com/bookshelf">CSS3 bookshelf</a>
+		</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>A Brief History of CSS</h2>
+	<ul>
+		<li class="slide"><strong>CSS 1</strong> December 1996, separated content from presentation. Basic font properties, colours, alignment, margins, padding and borders</li>
+		<li class="slide"><strong>CSS 2</strong> May 1998, built on previous spec with new positioning methods and media types<br/>
+			<strong>CSS 2.1</strong> clarified the CSS 2 spec, finally becoming a recommendation as late as June 2011.</li>
+		<li class="slide"><strong>CSS 3</strong> modularised features forming part of a larger specification. Modules implemented as they're designed by their authors</li>
+	</ul>
+	<div class="slide">
+		<p class="leftCol"><img style="width:100%" alt="Old website"/></p>
+		<p class="rightCol"><img style="width:100%" alt="New website"/></p>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Improvement has been slow</h2>
+	<ul>
+		<li>CSS 3 selectors brought new ways to select elements</li>
+		<li>Discussions on improving the syntax beyond selectors have never made it through the CSS Working Group</li>
+		<li><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 and has a small amount of support in Webkit</li>
+		<li>CSS Calculations has basic support in Gecko</li>
+	</ul>
+	
+	<div class="slide">
+		<h3>Stylesheets have gotten bigger</h3>
+		<ul>
+			<li>CSS for BBC News website in 2007: <strong>2270 lines in 61.93KB over 12 files</strong></li>
+			<li>CSS for BBC News website in 2012: <strong>19712 lines in 336KB over 12 files</strong> over 5 times bigger download and 8 times the number of lines of code
+			<li>CSS for Twitter Bootstrap: <strong>6490 lines in 128KB</strong>
+		</ul>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Two come along at once</h2>
+	<div class="leftCol">
+		<p><img style="width:100%" alt="Less CSS"/></p>
+		<ul>
+			<li>Nested rules</li>
+			<li>Variables</li>
+			<li>Calculations</li>
+			<li>Mixins</li>
+			<li>Compression</li>
+		</ul>
+	</div>
+	<div sclass="rightCol">
+		<p><img style="width:100%" alt="SASS"/></p>
+		<ul>
+			<li>Nested rules</li>
+			<li>Variables</li>
+			<li>Calculations</li>
+			<li>Mixins</li>
+			<li>Compression</li>
+		</ul>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Nested rules</h2>
+	<div class="leftCol">
+		<h3>CSS</h3>
+		<pre><code>
+.outer {
+	border: 1px solid #999;
+}
+.outer p {
+	padding:0 10px;
+	margin: 0 auto;
+}
+.outer.alert {
+	color:red;
+}
+		</code></pre>
+	</div>
+	<div class="rightCol">
+		<h3>SASS</h3>
+		<pre><code>
+.outer {
+	border: 1px solid #999;
+	p {
+		padding: 0 10px;
+		margin:0 auto;
+	}
+	&.alert {
+		color:red;
+	}
+}
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Variables</h2>
+	<div class="leftCol">
+		<h3>CSS</h3>
+		<pre><code>
+h1,h2,h3 {
+	color:#999;
+	text-shadow: 1px 2px 1px #999, -1px -2px 1px #999,
+}
+		</code></pre>
+	</div>
+	<div class="rightCol">
+		<h3>SASS</h3>
+		<pre><code>
+@headingColor: #999;
+h1,h2,h3 {
+	color:@headingColor;
+	text-shadow: 1px 2px 1px @headingColor, -1px -2px 1px @headingColor,
+}
+	</div>
+</section>
+
+	<div class="rightCol">
+		<h3>SASS</h3>
+		<pre><code>
+@headingColor: #999;
+h1,h2,h3 {
+	color:@headingColor;
+	text-shadow: 1px 2px 1px @headingColor, -1px -2px 1px @headingColor,
+}
+	</div>
+</section>
+
+<!-- End slides. -->
+
+
+<!-- Begin extension snippets. Add or remove as needed. -->
+
+<!-- deck.navigation snippet -->
+<a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="deck-next-link" title="Next">&#8594;</a>
+
+<!-- deck.status snippet -->
+<p class="deck-status">
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+
+<!-- End extension snippets. -->
+
+
+<!-- Required JS files. -->
+<script src="jquery-1.7.2.min.js"></script>
+<script src="core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="core/deck.core.js"></script>
+<script src="extensions/hash/deck.hash.js"></script>
+<script src="extensions/menu/deck.menu.js"></script>
+<script src="extensions/goto/deck.goto.js"></script>
+<script src="extensions/status/deck.status.js"></script>
+<script src="extensions/navigation/deck.navigation.js"></script>
+<script src="extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+	$(function() {
+		$.deck('.slide');
+	});
+</script>
+</body>
+</html>
