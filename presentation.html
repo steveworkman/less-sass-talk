@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=1024, user-scalable=no">
 
-	<title>CSS Pre-processors</title>
+	<title>CSS Pre-processors - Making life easier for CSS developers</title>
 	
 	<!-- Required stylesheet -->
 	<link rel="stylesheet" href="core/deck.core.css">
@@ -60,64 +60,12 @@
 <!-- Begin slides. Just make elements with a class of slide. -->
 
 <section class="slide" id="title-slide">
-	<h1>CSS Pre-processors</h1>
-	<!--  -->
-</section>
+	<div class="vcenter">
+		<h1>CSS Pre-Processors</h1>
+		<h2>Making life easier for web developers</h2>
+	</div>
 
-<section class="slide">
-	<h2>Who am I</h2>
-	<ul>
-		<li>
-			Steve Workman, mobile development lead at PA Consulting
-		</li>
-		<li class="slide">
-			<img src="images/lws_logo.png" alt="London Web Standards" style="float:right;">Organiser of <a href="http://londonwebstandards.org">London Web Standards</a> for the last two years
-		</li>
-	</ul>
-	<div class="slide">
-		<p>I make cool little components with CSS, like the <a href="http://www.steveworkman.com/bookshelf">CSS3 bookshelf</a></p>
-		<dl class="bookshelf"  style="font-size:0.55em;">
-<dt class="cssmastery"><span>CSS Mastery</span></dt>
-<dd class="cssmastery"><a class="amazonLink" href="http://www.amazon.co.uk/CSS-Mastery-Advanced-Standards-Solutions/dp/1590596145%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1590596145"><img src="http://ecx.images-amazon.com/images/I/4153AtAlT9L._SL160_.jpg" alt=""></a><br>
-<strong>CSS Mastery</strong> by Andy Budd, Cameron Moll and Simon Collison.<br>
-This was the book that taught me about CSS and I owe most of my<br>
-career to it. Recently updated with a second edition covering CSS3 techniques, like the ones you see here!<br>
-<a class="publisherLink" href="http://www.cssmastery.com/">Visit the CSS Mastery web site</a></dd>
-<dt class="beautwebdes"><span>Beautiful Web Design</span></dt>
-<dd class="beautwebdes"><a class="amazonLink" href="http://www.amazon.co.uk/Principles-Beautiful-Web-Design/dp/0975841963%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0975841963"><img src="http://ecx.images-amazon.com/images/I/41FxC9u%2B%2BVL._SL160_.jpg" alt=""></a><br>
-<strong>Beautiful Web Design</strong> by Jason Beaird.<br>
-This book teaches you a wide range of topics on how to make great web sites, covering layout styles, ratios and colour theory.<br>
-<a class="publisherLink" href="#">Beautiful Web Design on SitePoint</a>.</dd>
-<dt class="dontmakemethink"><span>Don’t Make Me Think</span></dt>
-<dd class="dontmakemethink"><a class="amazonLink" href="http://www.amazon.co.uk/Dont-Make-Me-Think-Usability/dp/0321344758%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0321344758"><img src="http://ecx.images-amazon.com/images/I/51Qnk8fkFPL._SL160_.jpg" alt=""></a><br>
-Steve Krug’s usability handbook is great to have around. Designed to be readable on a flight,<br>
-this book teaches you the importance of usability and how to do the basics of UX design and user testing.<br>
-<a class="publisherLink" href="#">Steve Krug’s web site</a>.</dd>
-<dt class="psforphotographers"><span>Photoshop CS3 for Photographers</span></dt>
-<dd class="psforphotographers"><a class="amazonLink" href="http://www.amazon.co.uk/Adobe-Photoshop-CS3-Photographers-Professional/dp/0240520289%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0240520289"><img src="http://ecx.images-amazon.com/images/I/51XbkxflGjL._SL160_.jpg" alt=""></a><br>
-Photoshop is the design tool of choice for many web-related design tasks. This book teaches you everything<br>
-you need to know from a photographer’s perspective. <a class="publisherLink" href="#">Publisher’s web site</a></dd>
-<dt class="beginningphp"><span>Beginning PHP5, Apache, and MySQL Web Development</span></dt>
-<dd class="beginningphp">Believe it or not, I learned how to code PHP and MySQL with this book. Taking you through the basics of a dynamic web site,<br>
-this book teaches you everything in one place. <a class="publisherLink" href="#">APress web site</a></dd>
-<dt class="webstandardsdesign"><span>Web Standards Creativity</span></dt>
-<dd class="webstandardsdesign"><a class="amazonLink" href="http://www.amazon.co.uk/Web-Standards-Creativity-Innovations-Scripting/dp/1590598032%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1590598032"><img src="http://ecx.images-amazon.com/images/I/417REaeaS%2BL._SL160_.jpg" alt=""></a><br>
-<strong>Web Standards Creativity</strong> is the follow-on book from CSS Mastery, taking the learnings and applying them<br>
-through case studies by leading web developers.<br>
-<a class="publisherLink" href="http://www.friendsofed.com/book.html?isbn=1590598032">Friends of Ed website</a></dd>
-<dt class="rightsideofbrain"><span>Drawing with the Right Side of the Brain</span></dt>
-<dd class="rightsideofbrain"><a class="amazonLink" href="http://www.amazon.co.uk/New-Drawing-Right-Side-Brain/dp/0007116454%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0007116454"><img src="http://ecx.images-amazon.com/images/I/5114QGDGH7L._SL160_.jpg" alt=""></a><br>
-Before I read this book, I drew like a child. Now, I draw just that little bit better! For those people who love design<br>
-but don’t know how to do it themselves, this is the book for you. <a class="publisherLink" href="#">Publisher’s web site</a></dd>
-<dt class="learnedinarchitecture"><span>101 Things I Learned in Architecture School</span></dt>
-<dd class="learnedinarchitecture"><a class="amazonLink" href="http://www.amazon.co.uk/101-Things-Learned-Architecture-School/dp/0262062666%3FSubscriptionId%3DAKIAJCFYSPA5V4ZSCM6Q%26tag%3Dstevwork-21%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0262062666"><img src="http://ecx.images-amazon.com/images/I/41QwdQnDSDL._SL160_.jpg" alt=""></a><br>
-Great short reading book with essential bits of information about design and expressing that design.</dd>
-</dl>
-</div>
-</section>
-<section class="slide">
-	<h2>Budgets? What budgets?</h2>
-	<img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif">
+	<!--  -->
 </section>
 
 <section class="slide">
@@ -134,7 +82,7 @@ Great short reading book with essential bits of information about design and exp
 		<div class="middleThreeCol">
 			<h3>2007</h3>
 			<img src="images/bbc-news-2007.png" style="width:100%" alt="BBC News 2007"/>
-			<p>Lines of CSS: <strong>2270</strong> <em>Up 52%</em><br/>
+			<p>Lines of CSS: <strong>2270</strong> <em style="color:green">Up 52%</em><br/>
 				Total File size: <strong>61.93KB</strong> (12 files)</p>
 		</div>
 	</div>
@@ -142,31 +90,38 @@ Great short reading book with essential bits of information about design and exp
 		<div class="rightThreeCol">
 			<h3>2012</h3>
 			<img src="images/bbc-news-2012.png" style="width:100%" alt="BBC News 2012"/>
-			<p>Lines of CSS: <strong>19712</strong> <em>Up 860%!</em><br/>
+			<p>Lines of CSS: <strong>19712</strong> <em style="color:green">Up 860%!</em><br/>
 				Total File size: <strong>336.30KB</strong> (12 files)</p>
-			<p><em>And now it's accelerating...</em></p>
 		</div>
 	</div>
 </section>
 
 <section class="slide">
-	<h2>Language improvements move even slower...</h2>
-	<ul>
-		<li class="slide">CSS 3 selectors brought new ways to select elements</li>
-		<li class="slide">Discussions on improving the syntax beyond selectors have never made it through the CSS Working Group</li>
-		<li class="slide"><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 but is only supported in Webkit nightly builds</li>
-		<li class="slide"><a href="http://www.w3.org/TR/css3-values/">Math functions</a> like calc() have support in Firefox (4+)*, Chrome (19+)* and IE9, and has been a working draft for <a href="http://www.w3.org/TR/2001/WD-css3-values-20010713/">11 years!</a>. It's currently at Last Call.</li>
+	<h2>Language improvements move even slower&hellip;</h2>
+	<ul class="leftCol">
+		<li>CSS 3 selectors brought new ways to select elements</li>
+		<li><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 but is only supported in Webkit nightly builds</li>
+		<li><a href="http://www.w3.org/TR/css3-values/">Math functions</a> like calc() have support in Firefox (4+)*, Chrome (19+)* and IE9, and has been a working draft for <a href="http://www.w3.org/TR/2001/WD-css3-values-20010713/">11 years!</a> It's currently at Last Call.</li>
 	</ul>
+	<div class="rightCol">
+		<img src="images/css-specs.PNG" alt="Current CSS specification statuses"/>
+	</div>
 </section>
 
 <section class="slide">
-	<h2>Two come along at once</h2>
+	<h2>Pressed for time?</h2>
+	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
+	<p><em>Dilbert.com</em></p>
+</section>
+
+<section class="slide">
+	<h2>Enter CSS Pre-processors</h2>
 	<div>
 		<div class="leftCol">
 			<p><img src="images/less_logo.png" style="" alt="Less CSS"/></p>
 			<p><img src="images/Sass_Logo.gif" style="" alt="SASS"/></p>
 		</div>
-		<div class="rightCol slide">
+		<div class="rightCol">
 			<h3>Both feature</h3>
 			<ul>
 				<li>Nested rules</li>
@@ -187,8 +142,7 @@ Great short reading book with essential bits of information about design and exp
 
 	<div class="leftCol">
 		<h3>CSS</h3>
-		<div class="code" mode="css" style="display: none;">
-section { 
+		<div class="code" mode="css" style="display: none;">section { 
   margin: 10px;
 }
 section nav { 
@@ -199,13 +153,12 @@ section nav a, section nav a:visited {
 }
 section nav a:hover, section nav a:focus {
   text-decoration: underline;
-}
-		</div>
+}</div>
 	</div>
 	<div class="rightCol">
 		<h3>SASS</h3>
-		<div class="code" mode="css" style="display: none;">
-$linkColor: #0982C1;
+		<div class="code" mode="css" style="display: none;">$linkColor: #0982C1;
+
 section {
   margin:10px;
   nav {
@@ -217,14 +170,13 @@ section {
       }
     }
   }
-}
-</div>
+}</div>
 	</div>
 </section>
 
 <section class="slide">
 	<h2>Mixins</h2>
-		<div class="slide">
+		<div>
 		<h3>CSS</h3>
 		<div class="code" mode="css" style="display: none;">header nav {
   background-color: #333;
@@ -236,15 +188,13 @@ section {
   background-image: linear-gradient(left, #555, #333); // Le standard
   background-repeat: repeat-x;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
-}
-		</div>
+}</div>
 	</div>
 		<div class="slide">
 		<h3>Less</h3>
 		<div class="code" mode="css" style="display: none;">header nav {
-	.horizontalGradient(#555, #333);
-}
-		</div>
+  .horizontal(#555, #333);
+}</div>
 	</div>
 </section>
 
@@ -267,29 +217,24 @@ section {
 </section>
 
 <section class="slide">
-	<h2>Modular CSS</h2>
+	<h2>Modular CSS = DRY Code</h2>
 	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
 	<ul>
-		<li>Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done</li>
-		<li>Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
+		<li>Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done. For Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
+		<li>How about all the gradients from <a href="http://lea.verou.me/css3patterns/">Lea Verou's CSS3 pattern gallery</a>? Download <a href="https://github.com/steveworkman/css-patterns-less">css-patterns-less</a></li>
 	</ul>
-	<div class="slide">
-	<h4>What's the best thing about SASS?</h4>
-		<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
-			<p>Keeping my code organized in a way I want to for development and then have it output in the most efficient way for the browser.</p>
-			<p><cite>Miles Carmany, Web Developer</cite></p>
-		</blockquote>
+	<div>
+		<img src="images/css3-gallery.png">
 	</div>
 </section>
 <section class="slide">
-	<h2>What do you see as the biggest advantage of using a pre-processor like Scss?</h2>
 	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
 		<p>It streamlines the whole process, and is easier to read and debug. It takes only a few minutes to set up but the time savings are immense.</p>
 		<p><cite>Ghaida Zahran, designer at ZURB</cite></p>
 	</blockquote>
-	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
-		<p>Maintainability and reusability.</p>
-		<p><cite>Jared Hardy, Product Design at Groupon</cite></p>
+	<blockquote cite="http://favstar.fm/users/Malarkey/status/114002481066938368">
+		<p>I once wrote that there was no need to use a CSS pre-processor like LESS or SASS. I was wrong. Very sorry&hellip;</p>
+		<p><cite>Andy Clarke aka <a href="http://twitter.com/malarkey">@malarkey</a></cite></p>
 	</blockquote>
 </section>
 
@@ -297,6 +242,7 @@ section {
 	<h2>Find out more</h2>
 	<p style="text-align:center"><img src="images/less_logo.png" alt="Less CSS"/><a href="http://lesscss.org">Lesscss.org</a></p>
 	<p style="text-align:center"><img src="images/Sass_Logo.gif" alt="SASS"/><a href="http://sass-lang.org">sass-lang.com</a></p>
+	<p style="text-align:center;"><strong>Stylus</strong><br/><a href="http://learnboost.github.com/stylus">learnboost.github.com/stylus</a> - A third way by <a href="http://twitter.com/tjholowaychuk">@tjholowaychuk</a></p>
 	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on modular CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
 </section>
 
