@@ -21,7 +21,7 @@
 	<link rel="stylesheet" href="extensions/codemirror/themes/default.css">
 
 	<!-- Style theme. More available in /themes/style/ or create your own. -->
-	<link rel="stylesheet" href="themes/style/web-2.0.css">
+	<link rel="stylesheet" href="themes/style/swiss.css">
 	
 	<!-- Transition theme. More available in /themes/transition/ or create your own. -->
 	<link rel="stylesheet" href="themes/transition/horizontal-slide.css">
@@ -145,9 +145,10 @@
 
 <section class="slide">
 	<h2>Nesting &amp; Variables</h2>
+
 	<div class="leftCol">
 		<h3>CSS</h3>
-		<pre><code>
+		<div class="code" mode="css" style="display: none;">
 section { 
   margin: 10px;
 }
@@ -160,11 +161,11 @@ section nav a, section nav a:visited {
 section nav a:hover, section nav a:focus {
   text-decoration: underline;
 }
-		</code></pre>
+		</div>
 	</div>
 	<div class="rightCol">
 		<h3>SASS</h3>
-		<pre><code>
+		<div class="code" mode="css" style="display: none;">
 $linkColor: #0982C1;
 section {
   margin:10px;
@@ -178,7 +179,7 @@ section {
     }
   }
 }
-</code></pre>
+</div>
 	</div>
 </section>
 
@@ -186,7 +187,7 @@ section {
 	<h2>Mixins</h2>
 		<div class="slide">
 		<h3>CSS</h3>
-		<pre><code>header > nav {
+		<div class="code" mode="css" style="display: none;">header nav {
   background-color: #333;
   background-image: -moz-linear-gradient(left, #555, #333); // FF 3.6+
   background-image: -ms-linear-gradient(left, #555, #333); // IE10
@@ -197,21 +198,21 @@ section {
   background-repeat: repeat-x;
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
 }
-		</code></pre>
+		</div>
 	</div>
 		<div class="slide">
 		<h3>Less</h3>
-		<pre><code>header > nav {
+		<div class="code" mode="css" style="display: none;">header nav {
 	.horizontalGradient(#555, #333);
 }
-		</code></pre>
+		</div>
 	</div>
 </section>
 
 <section class="slide">
 	<h2>Mixins contd...</h2>
 		<h3>Mixins.less</h3>
-		<pre><code>.horizontal(@startColor: #555, @endColor: #333) {
+		<div class="code" mode="css" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
     background-color: @endColor;
     background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
     background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
@@ -222,7 +223,7 @@ section {
     background-repeat: repeat-x;
     filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
   }
-		</code></pre>
+		</div>
 	</div>
 </section>
 
@@ -315,6 +316,8 @@ section {
 <script src="extensions/codemirror/mode/xml/xml.js"></script>
 <script src="extensions/codemirror/mode/css/css.js"></script>
 <script src="extensions/codemirror/mode/htmlmixed/htmlmixed.js"></script>
+
+<script src="extensions/codemirror/deck.codemirror.js"></script>
 
 <!-- Initialize the deck. You can put this in an external file if desired. -->
 <script>
