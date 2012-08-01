@@ -1,0 +1,37 @@
+2001 BBC News - http://news.bbc.co.uk/1/hi/in_depth/world/2001/review_of_2001/default.stm
+uki_globalstylesheet.css	31.85KB	1493
+
+
+2007 BBC News
+style.css 				10kb 	424
+story.css				6kb 	222
+programmes.css 			2.85KB 	112
+election07_index.css 	3.77kb 	122
+styles.css 				6.43KB 	312
+furniture.css 			10.15kb 386
+promo.css 				0.43KB 	34
+business.css 			3.6KB 	159
+ukfs.css 				2.44kb	24
+v3masthead.css 			4.35kb	54
+toolbar_ukfs.css 		2.62KB 	34
+emp.css 				9.43KB 	399
+
+61.93KB
+2270 lines
+
+
+2012 BBC News - line sizes measured using css pretty printer
+widgets.css 	39.43KB 	1779
+pulse.css 		1.62KB 		121
+type.css 		8.75KB 		303
+global.css 		20.65KB 	1406
+print.css 		3.85KB		277
+skin.css 		11.6KB 		637
+mobile.css 		0.03KB 		1
+index.css 		0.6KB 		55
+components.css 	220.63KB 	13291
+overlay.css 	0.2KB 		14
+main.css 		28.94KB 	1828
+
+336.3KB 
+19712 lines
