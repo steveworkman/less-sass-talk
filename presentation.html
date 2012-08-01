@@ -63,9 +63,15 @@
 	<div class="vcenter">
 		<h1>CSS Pre-Processors</h1>
 		<h2>Making life easier for web developers</h2>
+		<h3>Steve Workman</h3>
+		<h4><a href="http://twitter.com/steveworkman">@steveworkman</a></h4>
 	</div>
 
-	<!--  -->
+	<!-- <h2>Introduction</h2>
+		<ul><li>Who I am and what I do</li>
+			<li>What I'm going to talk about today</li>
+		</ul>
+	 -->
 </section>
 
 <section class="slide">
@@ -94,7 +100,15 @@
 				Total File size: <strong>336.30KB</strong> (12 files)</p>
 		</div>
 	</div>
+	<!-- <h2>CSS evolution</h2>
+		<p>The last decade has taken been a very slow period of evolution for CSS. In 2001, websites were simple, connection speed was low, ISDN at best for most, and CSS had reached level 2. BBC news was ~1500 lines of CSS.<br/> IE6 being the only browser, web standards didn't really move forward until Firefox came around in 2005, and because of its dominance, IE6 took a long time to disappear. So in 2007, the Bbc news site hadn't really changed and its CSS was around 50% bigger. <br/>Since then, bigger screens, the death of IE6 in the western world, and CSS3 have moved the web on. Today, BBC News website is nearly 20,000 lines of CSS, which is a lot for any web site.
+		<ul><li>Mention acronymn is Cascading Style Sheets</li>
+			<li>Don't read the numbers, it should be "around 1500, 50% more, 2200, and nearly 20000"</li>
+		</ul>
+		<p>How can you maintain 20,000 lines of code in a world where frameworks and object-oriented languages do all the hard work for you?</p>
+	 -->
 </section>
+
 
 <section class="slide">
 	<h2>Language improvements move even slower&hellip;</h2>
@@ -106,12 +120,21 @@
 	<div class="rightCol">
 		<img src="images/css-specs.PNG" alt="Current CSS specification statuses"/>
 	</div>
+	<!--
+	<ul><li>There have been attempts to bring the language up to date</li>
+		<li>On the right is the current CSS spec statuses, these are all the modules being worked on.</li>
+	</ul>
+-->
 </section>
 
 <section class="slide">
 	<h2>Pressed for time?</h2>
 	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
-	<p><em>Dilbert.com</em></p>
+	<p><a href="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"><em>Dilbert.com</em></a></p>
+	<!--
+	<p>How can people possibly fit all this into their heads if they're expected to do things faster, more efficiently, and keep their sanity.</p>
+	<p>The technology that solves all these problems and more, is CSS pre-processors</p>
+-->
 </section>
 
 <section class="slide">
@@ -126,15 +149,18 @@
 			<ul>
 				<li>Nested rules</li>
 				<li>Variables</li>
+				<li>Mixins</li>
 				<li>Math functions</li>
 				<li>Extensions</li>
-				<li>Mixins</li>
-				<li>Compression</li>
 				<li>Works with regular CSS</li>
 			</ul>
 		</div>
-		
 	</div>
+	<!--<ul><li>Sass stands for Syntactically Awesome StyleSheets</li>
+			<li>Less just means Less CSS</li>
+			<li>DON'T JUST READ THE THINGS ON THE RIGHT</li>
+			<li><strong>I'm going to talk about three of these features: Nested rules, Variables and Mixins</strong></li>
+-->
 </section>
 
 <section class="slide">
@@ -172,6 +198,9 @@ section {
   }
 }</div>
 	</div>
+	<!--
+	<p>Tell the story about the manager wanting a different colour blue, then asking for another. 2 second change or 2 hours?</p>
+-->
 </section>
 
 <section class="slide">
@@ -214,6 +243,10 @@ section {
   }
 		</div>
 	</div>
+	<!--
+	<p>Mixins are very efficient - no effect of having large libraries of them on client download.</p>
+	<p>They enable modular CSS</p>
+-->
 </section>
 
 <section class="slide">
@@ -226,6 +259,9 @@ section {
 	<div>
 		<img src="images/css3-gallery.png">
 	</div>
+	<!--
+	<p>Efficiency, Maintainability, Moving code from one project to another, sharing code in similar projects</p>
+-->
 </section>
 <section class="slide">
 	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
