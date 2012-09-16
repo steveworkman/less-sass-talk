@@ -78,7 +78,7 @@
 	<h2>Who I am</h2>
 	<div class="leftCol">
 	<ul>
-		<li>Mobile Development Lead at PA Consulting Group</li>
+		<li>Mobile &amp; Front-end Development Lead at PA Consulting Group</li>
 		<li>Organiser of London Web Standards since 2010</li>
 		<li>Made a <a href="http://www.steveworkman.com/bookshelf">bookshelf in CSS3</a></li>
 	</ul>
@@ -126,7 +126,63 @@ Great short reading book with essential bits of information about design and exp
 </section>
 
 <section class="slide">
-	<h2>CSS has evolved slowly</h2>
+	<h2>State of CSS</h2>
+	<figure>
+		<img src="http://www.glazman.org/weblog/dotclear/public/photos/CSSWG2010.jpg" alt="CSS Working Group 2012">
+		<figcaption>W3C CSS Working Group in 2010 - Photo by Daniel Glazman</figcaption>
+	</figure>
+</section>
+
+<section class="slide">
+	<p>CSS Level 2 needed 9 years, from August 2002 to June 2011 to reach the Recommendation status. This was due to the fact that a few secondary features hold back the whole specification.</p>
+</section>
+
+<section class="slide">
+	<h2>The Beijing Doctrine</h2>
+	<figure>
+		<img src="https://developer.mozilla.org/files/3623/CSS_Modules_and_Snapshots.png" alt="CSS Modules and snapshots">
+		<figcaption>CSS Modules and snapshots - MDN</figcaption>
+	</figure>
+	<!--
+
+	Beijing Doctorine - http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules
+-->
+</section>
+
+
+<section class="slide">
+	<h2>Modules currently in development</h2>
+
+	<p><img src="images/css-specs.PNG" alt="Current CSS specification statuses"/></p>
+	<!--
+	<ul><li>There have been attempts to bring the language up to date</li>
+		<li>On the right is the current CSS spec statuses, these are all the modules being worked on.</li>
+	</ul>
+-->
+</section>
+
+<section class="slide">
+	<h2>CSS <strike>Variables</strike> Custom Properties</h2>
+	<a href="http://dev.w3.org/csswg/css-variables/"></a>
+</section>
+
+<section class="slide">
+	<h2>Calculations (CSS Values)</h2>
+	<iframe style="width:100%; height:350px" src="http://caniuse.com/calc/embed/eras=-2,"></iframe>
+</section>
+
+<section class="slide">
+	<h2>Why do we need these things?</h2>
+	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
+	<p><a href="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"><em>Dilbert.com</em></a></p>
+	<!--
+	<p>How can people possibly fit all this into their heads if they're expected to do things faster, more efficiently, and keep their sanity.</p>
+	<p>The technology that solves all these problems and more, is CSS pre-processors</p>
+-->
+</section>
+
+<section class="slide">
+	<h2>A decade of BBC News</h2>
 	<div class=" slide">
 		<div class="leftThreeCol">
 			<h3>2001</h3>
@@ -151,7 +207,7 @@ Great short reading book with essential bits of information about design and exp
 				Total File size: <strong>336.30KB</strong> (12 files)</p>
 		</div>
 	</div>
-	<!-- <h2>CSS evolution</h2>
+	<!-- <h2>Decade of BBC News</h2>
 		<p>The last decade has taken been a very slow period of evolution for CSS. In 2001, websites were simple, connection speed was low, ISDN at best for most, and CSS had reached level 2. BBC news was ~1500 lines of CSS.<br/> IE6 being the only browser, web standards didn't really move forward until Firefox came around in 2005, and because of its dominance, IE6 took a long time to disappear. So in 2007, the Bbc news site hadn't really changed and its CSS was around 50% bigger. <br/>Since then, bigger screens, the death of IE6 in the western world, and CSS3 have moved the web on. Today, BBC News website is nearly 20,000 lines of CSS, which is a lot for any web site.
 		<ul><li>Mention acronymn is Cascading Style Sheets</li>
 			<li>Don't read the numbers, it should be "around 1500, 50% more, 2200, and nearly 20000"</li>
@@ -160,32 +216,9 @@ Great short reading book with essential bits of information about design and exp
 	 -->
 </section>
 
-
 <section class="slide">
-	<h2>Language improvements move even slower&hellip;</h2>
-	<ul class="leftCol">
-		<li>CSS 3 selectors brought new ways to select elements</li>
-		<li><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 but is only supported in Webkit nightly builds</li>
-		<li><a href="http://www.w3.org/TR/css3-values/">Math functions</a> like calc() have support in Firefox (4+)*, Chrome (19+)* and IE9, and has been a working draft for <a href="http://www.w3.org/TR/2001/WD-css3-values-20010713/">11 years!</a> It's currently at Last Call.</li>
-	</ul>
-	<div class="rightCol">
-		<img src="images/css-specs.PNG" alt="Current CSS specification statuses"/>
-	</div>
-	<!--
-	<ul><li>There have been attempts to bring the language up to date</li>
-		<li>On the right is the current CSS spec statuses, these are all the modules being worked on.</li>
-	</ul>
--->
-</section>
-
-<section class="slide">
-	<h2>Pressed for time?</h2>
-	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
-	<p><a href="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"><em>Dilbert.com</em></a></p>
-	<!--
-	<p>How can people possibly fit all this into their heads if they're expected to do things faster, more efficiently, and keep their sanity.</p>
-	<p>The technology that solves all these problems and more, is CSS pre-processors</p>
--->
+	<h2>Modular CSS</h2>
+	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on modular CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
 </section>
 
 <section class="slide">
@@ -201,6 +234,7 @@ Great short reading book with essential bits of information about design and exp
 				<li>Nested rules</li>
 				<li>Variables</li>
 				<li>Mixins</li>
+				<li>Logic &amp; Loops</li>
 				<li>Math functions</li>
 				<li>Extensions</li>
 				<li>Works with regular CSS</li>
@@ -255,6 +289,11 @@ section {
 </section>
 
 <section class="slide">
+	<h2>Variable scoping</h2>
+	http://css-tricks.com/sass-vs-less/
+</section>
+
+<section class="slide">
 	<h2>Mixins</h2>
 		<div>
 		<h3>CSS</h3>
@@ -279,7 +318,7 @@ section {
 </section>
 
 <section class="slide">
-	<h2>Mixins contd...</h2>
+	<h2>Mixins contd&hellip;</h2>
 		<h3>Mixins.less</h3>
 		<div class="code" mode="css" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
     background-color: @endColor;
@@ -301,6 +340,15 @@ section {
 </section>
 
 <section class="slide">
+	<h2>Loops &amp; Logic</h2>
+
+</section>
+
+<section class="slide">
+	<h2>Extensible classes</h2>
+</section>
+
+<section class="slide">
 	<h2>Modular CSS = DRY Code</h2>
 	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
 	<ul>
@@ -314,15 +362,36 @@ section {
 	<p>Efficiency, Maintainability, Moving code from one project to another, sharing code in similar projects</p>
 -->
 </section>
+
 <section class="slide">
-	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
-		<p>It streamlines the whole process, and is easier to read and debug. It takes only a few minutes to set up but the time savings are immense.</p>
-		<p><cite>Ghaida Zahran, designer at ZURB</cite></p>
-	</blockquote>
-	<blockquote cite="http://favstar.fm/users/Malarkey/status/114002481066938368">
-		<p>I once wrote that there was no need to use a CSS pre-processor like LESS or SASS. I was wrong. Very sorry&hellip;</p>
-		<p><cite>Andy Clarke aka <a href="http://twitter.com/malarkey">@malarkey</a></cite></p>
-	</blockquote>
+	<h2>Generating Rules</h2>
+	Using loops/guards to create CSS rules
+</section>
+
+<section class="slide">
+	<h2>Compass</h2>
+</section>
+
+<section class="slide">
+	<h2>Is one better than the other?</h2>
+	<p>Yes, but don't think like that</p>
+</section>
+
+<section class="slide">
+	<h2>When to use?</h2>
+	<h1>All the time</h1>
+
+</section>
+
+<section class="slide">
+	<h2>Tools</h2>
+	Yeoman
+	Codekit
+	Build scripts - Grunt, Ant, Jenkins, Teamcity
+</section>
+
+<section class="slide">
+	<h2>Get started</h2>
 </section>
 
 <section class="slide">
