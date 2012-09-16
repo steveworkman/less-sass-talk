@@ -357,6 +357,10 @@ body.deck-container {
 
   @page {
     margin: 0.5cm;
+
+  section.slide {
+    page-break-before: always;
+  }
 }
 
   p, h2, h3 {
@@ -366,6 +370,7 @@ body.deck-container {
 
   h2, h3 {
     page-break-after: avoid;
+    clear:both;
   }
 
   .slide {
