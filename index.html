@@ -50,6 +50,20 @@
 			width: 31%;
 			padding: 2%;
 		}
+		path {
+		    stroke: steelblue;
+		    stroke-width: 2;
+		    fill: none;
+		}
+		 
+		line {
+		    stroke: black;
+		}
+		 
+		text {
+		    font-family: Arial;
+		    font-size: 9pt;
+		}
 	</style>
 	
 	<!-- Required Modernizr file -->
@@ -134,6 +148,13 @@
 <section class="slide">
 	<h2>Calculations (CSS Values)</h2>
 	<iframe style="width:100%; height:350px" src="http://caniuse.com/calc/embed/eras=-2,"></iframe>
+	<h3>Example</h3>
+<div class="code" mode="css" style="display: none;">section {
+  float: left;
+  margin: 1em; border: solid 1px;
+  // one col of 3 col layout minus 1em padding each side and 1px border each side
+  width: calc(100%/3 - 2*1em - 2*1px); 
+}</div>
 </section>
 
 <section class="slide">
@@ -182,8 +203,8 @@
 </section>
 
 <section class="slide">
-	<h2>Modular CSS</h2>
-	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on modular CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
+	<h2>How much code?</h2>
+	<img src="images/bbcnewsgraph.png" alt="Graph of the previous slide">
 </section>
 
 <section class="slide">
@@ -255,7 +276,30 @@ section {
 
 <section class="slide">
 	<h2>Variable scoping</h2>
-	http://css-tricks.com/sass-vs-less/
+	<div class="leftCol">
+		<h3>Less</h3>
+		<div class="code" mode="css" style="display: none;">@color: black;           
+.scoped { 
+  @color: white;
+  color: @color;        
+}                        
+.unscoped {   
+  // Black, as it should be  
+  color: @color;
+}</div>
+</div>
+	<div class="rightCol">
+		<h3>Sass</h3>
+		<div class="code" mode="css" style="display: none;">$color: black;           
+.scoped { 
+  $color: white;
+  color: $color;        
+}                        
+.unscoped {
+   // White, as it was overwritten above   
+  color: $color;
+}</div>
+	</div>
 </section>
 
 <section class="slide">
@@ -311,6 +355,42 @@ section {
 
 <section class="slide">
 	<h2>Extensible classes</h2>
+	<div class="leftCol">
+		<h3>Less</h3>
+		<div class="code" mode="css" style="display: none;">.module-a {
+	/* A bunch of stuff */
+}
+.module-b {
+  /* Copies everything from .module-a */
+   .module-a();
+   border: 1px solid red;
+}</div>
+
+<div class="code" mode="css" style="display: none;">.module-a {
+	/* A bunch of stuff */
+}
+.module-b {
+   /* A bunch of stuff */
+   border: 1px solid red;
+}</div>
+</div>
+	<div class="rightCol">
+		<h3>Sass</h3>
+		<div class="code" mode="css" style="display: none;">.module-a {
+   /* A bunch of stuff */
+}
+.module-b {
+   /* extends selectors, not code */
+   @extend .module-a;
+   border: 1px solid red;
+}</div>
+<div class="code" mode="css" style="display: none;">.module-a, .module-b {
+   /* A bunch of stuff */
+}
+.module-b {
+   border: 1px solid red;
+}</div>
+	</div>
 </section>
 
 <section class="slide">
@@ -341,6 +421,11 @@ section {
 	<h2>Minimal CSS</h2>
 	If you've got a page that only needs certain parts of the CSS, give them that stylesheet only.
 	Mobile site? only give them the mobile styles but keep the vars and mixins
+</section>
+
+<section class="slide">
+	<h2>Modular CSS</h2>
+	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on modular CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
 </section>
 
 <section class="slide">
@@ -413,7 +498,6 @@ section {
 <script src="core/deck.core.js"></script>
 
 <!-- Extension JS files. Add or remove as needed. -->
-<script src="core/deck.core.js"></script>
 <script src="extensions/hash/deck.hash.js"></script>
 <script src="extensions/menu/deck.menu.js"></script>
 <script src="extensions/goto/deck.goto.js"></script>
