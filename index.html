@@ -358,7 +358,7 @@ section {
 	<div class="leftCol">
 		<h3>Less</h3>
 		<div class="code" mode="css" style="display: none;">.module-a {
-	/* A bunch of stuff */
+  /* A bunch of stuff */
 }
 .module-b {
   /* Copies everything from .module-a */
@@ -367,10 +367,10 @@ section {
 }</div>
 
 <div class="code" mode="css" style="display: none;">.module-a {
-	/* A bunch of stuff */
+  /* A bunch of stuff */
 }
 .module-b {
-   /* A bunch of stuff */
+  /* A bunch of stuff */
    border: 1px solid red;
 }</div>
 </div>
@@ -395,7 +395,42 @@ section {
 
 <section class="slide">
 	<h2>Generating Rules</h2>
-	Using loops/guards to create CSS rules
+	<div class="leftCol"><h3>Less</h3>
+	<div class="code" mode="css" style="display:none;">// Do this function while @index > 0
+.indentX (@index) when (@index > 0) {
+  // Generate .indent-@index selector
+  (~".indent-@{index}") { .indent(@index); }
+  .indentX(@index - 1);
+}
+// Do this function when @index == 0
+.indentX (0) {}
+
+// Mixin to fill the indent with
+.indent (@columns) {
+  @colsminusone: @columns - 1;
+  text-indent: @columns * 20px;
+  background-color: darken(#f5f5f5, @colsminusone*6%);
+}
+// Run the function
+.indentX (4);</div></div>
+	<div class="rightCol"><h3>CSS</h3>
+		<div class="code" mode="css" style="display:none;">.indent-4 {
+  text-indent: 80px;
+  background-color: #c7c7c7;
+}
+.indent-3 {
+  text-indent: 60px;
+  background-color: #d6d6d6;
+}
+.indent-2 {
+  text-indent: 40px;
+  background-color: #e6e6e6;
+}
+.indent-1 {
+  text-indent: 20px;
+  background-color: whitesmoke;
+}</div>
+	</div>
 </section>
 
 <section class="slide">
