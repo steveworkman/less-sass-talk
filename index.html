@@ -94,10 +94,8 @@
 		<img src="http://www.glazman.org/weblog/dotclear/public/photos/CSSWG2010.jpg" alt="CSS Working Group 2012">
 		<figcaption>W3C CSS Working Group in 2010 - Photo by Daniel Glazman</figcaption>
 	</figure>
-</section>
-
-<section class="slide">
-	<p>CSS Level 2 needed 9 years, from August 2002 to June 2011 to reach the Recommendation status. This was due to the fact that a few secondary features hold back the whole specification.</p>
+	<!-- All major browser manufacturers and key vendors are represented. Big companies like Facebook also provide their expertise to the group.
+	CSS Level 2 needed 9 years, from August 2002 to June 2011 to reach the Recommendation status. This was due to the fact that a few secondary features hold back the whole specification.-->
 </section>
 
 <section class="slide">
@@ -125,8 +123,12 @@
 </section>
 
 <section class="slide">
-	<h2>CSS <strike>Variables</strike> Custom Properties</h2>
-	<a href="http://dev.w3.org/csswg/css-variables/"></a>
+	<h2>CSS <strike>Variables</strike> Cascading Variables</h2>
+
+<blockquote><strong>The proposed spec is NOT about variables</strong> and I seriously wonder if we should not change the title of the document. You may call the feature it introduces "variables" but at the deeper level, that's not about variables.</blockquote>
+<cite href="http://www.glazman.org/weblog/dotclear/index.php?post/2012/08/17/CSS-Variables%2C-why-we-drop-the-%24foo-notation">Daniel Glazman, CSSWG Co-Chair, August 2012</cite>
+<p>[CSS Cascading Variables is] a family of custom author-defined properties known collectively as <strong>custom properties</strong>, which allow an author to assign arbitrary values to a property with an author-chosen name, and <strong>variables</strong>, which allow an author to then use those values in other properties elsewhere in the document.</p>
+<p>First requested in <em>1998</em>, first W3C proposal: <em><a href="http://disruptive-innovations.com/zoo/cssvariables/">2008</a></em>, first public draft <em><a href="http://www.w3.org/TR/2012/WD-css-variables-20120410/">April 2012</a></em></p>
 </section>
 
 <section class="slide">
@@ -312,6 +314,15 @@ section {
 </section>
 
 <section class="slide">
+	<h2>Generating Rules</h2>
+	Using loops/guards to create CSS rules
+</section>
+
+<section class="slide">
+	<h2>Compass</h2>
+</section>
+
+<section class="slide">
 	<h2>Modular CSS = DRY Code</h2>
 	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
 	<ul>
@@ -327,12 +338,9 @@ section {
 </section>
 
 <section class="slide">
-	<h2>Generating Rules</h2>
-	Using loops/guards to create CSS rules
-</section>
-
-<section class="slide">
-	<h2>Compass</h2>
+	<h2>Minimal CSS</h2>
+	If you've got a page that only needs certain parts of the CSS, give them that stylesheet only.
+	Mobile site? only give them the mobile styles but keep the vars and mixins
 </section>
 
 <section class="slide">
