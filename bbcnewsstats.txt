@@ -1,6 +1,8 @@
 2001 BBC News - http://news.bbc.co.uk/1/hi/in_depth/world/2001/review_of_2001/default.stm
 uki_globalstylesheet.css	31.85KB	1493
 
+1706 Lines HTML
+
 
 2007 BBC News
 style.css 				10kb 	424
@@ -19,6 +21,8 @@ emp.css 				9.43KB 	399
 61.93KB
 2270 lines
 
+2182 Lines of HTML
+
 
 2012 BBC News - line sizes measured using css pretty printer
 widgets.css 	39.43KB 	1779
@@ -35,3 +39,5 @@ main.css 		28.94KB 	1828
 
 336.3KB 
 19712 lines
+
+3879 Lines of HTML
