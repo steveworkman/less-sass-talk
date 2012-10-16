@@ -50,6 +50,11 @@
 			width: 31%;
 			padding: 2%;
 		}
+		.usefulness {
+			text-align: center !important;
+			margin-top: 1em !important;
+			font-size: 1.5em !important;
+		}
 		path {
 		    stroke: steelblue;
 		    stroke-width: 2;
@@ -138,15 +143,6 @@
 </section>
 
 <section class="slide">
-	<h2>CSS <strike>Variables</strike> Cascading Variables</h2>
-
-<blockquote><strong>The proposed spec is NOT about variables</strong> and I seriously wonder if we should not change the title of the document. You may call the feature it introduces "variables" but at the deeper level, that's not about variables.</blockquote>
-<cite href="http://www.glazman.org/weblog/dotclear/index.php?post/2012/08/17/CSS-Variables%2C-why-we-drop-the-%24foo-notation">Daniel Glazman, CSSWG Co-Chair, August 2012</cite>
-<p>[CSS Cascading Variables is] a family of custom author-defined properties known collectively as <strong>custom properties</strong>, which allow an author to assign arbitrary values to a property with an author-chosen name, and <strong>variables</strong>, which allow an author to then use those values in other properties elsewhere in the document.</p>
-<p>First requested in <em>1998</em>, first W3C proposal: <em><a href="http://disruptive-innovations.com/zoo/cssvariables/">2008</a></em>, first public draft <em><a href="http://www.w3.org/TR/2012/WD-css-variables-20120410/">April 2012</a></em></p>
-</section>
-
-<section class="slide">
 	<h2>Calculations (CSS Values)</h2>
 	<iframe style="width:100%; height:350px" src="http://caniuse.com/calc/embed/eras=-2,"></iframe>
 	<h3>Example</h3>
@@ -156,6 +152,15 @@
   // one col of 3 col layout minus 1em padding each side and 1px border each side
   width: calc(100%/3 - 2*1em - 2*1px); 
 }</div>
+</section>
+
+<section class="slide">
+	<h2>CSS <strike>Variables</strike> Cascading Variables</h2>
+
+<blockquote><strong>The proposed spec is NOT about variables</strong> and I seriously wonder if we should not change the title of the document. You may call the feature it introduces "variables" but at the deeper level, that's not about variables.</blockquote>
+<cite href="http://www.glazman.org/weblog/dotclear/index.php?post/2012/08/17/CSS-Variables%2C-why-we-drop-the-%24foo-notation">Daniel Glazman, CSSWG Co-Chair, August 2012</cite>
+<p>[CSS Cascading Variables is] a family of custom author-defined properties known collectively as <strong>custom properties</strong>, which allow an author to assign arbitrary values to a property with an author-chosen name, and <strong>variables</strong>, which allow an author to then use those values in other properties elsewhere in the document.</p>
+<p>First requested in <em>1998</em>, first W3C proposal: <em><a href="http://disruptive-innovations.com/zoo/cssvariables/">2008</a></em>, first public draft <em><a href="http://www.w3.org/TR/2012/WD-css-variables-20120410/">April 2012</a></em></p>
 </section>
 
 <section class="slide">
@@ -178,7 +183,7 @@
 				Total File size: <strong>31.85KB</strong> (1 file)</p>
 		</div>
 	</div>
-	<div class=" slide">
+	<div class="slide">
 		<div class="middleThreeCol">
 			<h3>2007</h3>
 			<img src="images/bbc-news-2007.png" style="width:100%" alt="BBC News 2007"/>
@@ -186,7 +191,7 @@
 				Total File size: <strong>61.93KB</strong> (12 files)</p>
 		</div>
 	</div>
-	<div class=" slide">
+	<div class="slide">
 		<div class="rightThreeCol">
 			<h3>2012</h3>
 			<img src="images/bbc-news-2012.PNG" style="width:100%" alt="BBC News 2012"/>
@@ -207,27 +212,39 @@
 	<h2>How much code?</h2>
 	<img src="images/bbcnewsgraph.png" alt="Graph of the previous slide">
 </section>
+<section class="slide">
+	<h2>How much code?</h2>
+	<img src="images/bbcnewsgraph-js.png" alt="Graph of the previous slide">
+</section>
 
 <section class="slide">
 	<h2>Enter CSS Pre-processors</h2>
-	<div>
-		<div class="leftCol">
-			<p><img src="images/less_logo.png" style="" alt="Less CSS"/></p>
-			<p><img src="images/Sass_Logo.gif" style="" alt="SASS"/></p>
+		<div>
+			<p  class="leftCol"><img src="images/less_logo.png" style="" alt="Less CSS"/></p>
+			<p  class="rightCol"><img src="images/Sass_Logo.gif" style="" alt="SASS"/></p>
 		</div>
-		<div class="rightCol">
+		<div style="clear:both;">
 			<h3>Both feature</h3>
-			<ul>
-				<li>Nested rules</li>
-				<li>Variables</li>
-				<li>Mixins</li>
-				<li>Logic &amp; Loops</li>
-				<li>Math functions</li>
-				<li>Extensions</li>
-				<li>Works with regular CSS</li>
-			</ul>
+			<div class="leftThreeCol">
+				<ul>
+					<li>Nested rules</li>
+					<li>Variables</li>
+				</ul>
+			</div>
+			<div class="middleThreeCol">
+				<ul>
+					<li>Mixins</li>
+					<li>Logic &amp; Loops</li>
+				</ul>
+			</div>
+			<div class="rightThreeCol">
+				<ul>
+					<li>Math functions</li>
+					<li>Extensions</li>
+					<li>Works with regular CSS</li>
+				</ul>
+			</div>
 		</div>
-	</div>
 	<!--<ul><li>Sass stands for Syntactically Awesome StyleSheets</li>
 			<li>Less just means Less CSS</li>
 			<li>DON'T JUST READ THE THINGS ON THE RIGHT</li>
@@ -236,10 +253,11 @@
 </section>
 
 <section class="slide">
-	<h2>Nesting &amp; Variables</h2>
-
+	<h2>Nesting Rules</h2>
+		<div>
 	<div class="leftCol">
 		<h3>CSS</h3>
+
 		<div class="code" mode="css" style="display: none;">section { 
   margin: 10px;
 }
@@ -255,20 +273,21 @@ section nav a:hover, section nav a:focus {
 	</div>
 	<div class="rightCol">
 		<h3>SASS</h3>
-		<div class="code" mode="css" style="display: none;">$linkColor: #0982C1;
-
-section {
+		<div class="code" mode="css" style="display: none;">section {
   margin:10px;
   nav {
     height:25px;
     a, a:visited {
-      color: $linkColor;
+      color: #0982C1;
       &:hover, &:focus {
         text-decoration:underline;
       }
     }
   }
 }</div>
+</div>
+<div style="clear:both;"></div>
+<h3 class="slide usefulness">Useful, but not amazing</h3>
 	</div>
 	<!--
 	<p>Tell the story about the manager wanting a different colour blue, then asking for another. 2 second change or 2 hours?</p>
@@ -276,31 +295,83 @@ section {
 </section>
 
 <section class="slide">
-	<h2>Variable scoping</h2>
-	<div class="leftCol">
-		<h3>Less</h3>
-		<div class="code" mode="css" style="display: none;">@color: black;           
-.scoped { 
-  @color: white;
-  color: @color;        
-}                        
-.unscoped {   
-  // Black, as it should be  
-  color: @color;
-}</div>
-</div>
-	<div class="rightCol">
-		<h3>Sass</h3>
-		<div class="code" mode="css" style="display: none;">$color: black;           
-.scoped { 
-  $color: white;
-  color: $color;        
-}                        
-.unscoped {
-   // White, as it was overwritten above   
-  color: $color;
-}</div>
-	</div>
+	<h2>Variables</h2>
+	<ul>
+		<li class="slide">Define a property/value/string anywhere</li>
+		<li class="slide">Use it again</li>
+		<li class="slide">...</li>
+		<li class="slide">Profit!</li>
+		<li class="slide">Less uses @, Sass uses $</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>$, or @</h2>
+	<img src="images/who-cares.jpg" alt="Who cares?">
+</section>
+
+<section class="slide">
+	<h1>Clever @importing is the key</h1>
+</section>
+
+<section class="slide">
+	<h2>Bootstrap.less</h2>
+	<div class="code" mode="css" style="display: none;">// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+@import "media-grid.less";
+
+// Base CSS
+@import "type.less";
+@import "code.less";
+@import "forms.less";
+@import "tables.less";
+
+// Components: common
+@import "sprites.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+@import "close.less";
+
+...</div>
+</section>
+
+<section class="slide">
+	<h2>Bootstrap's responsive.less</h2>
+	<div class="code" mode="css" style="display: none;">// REPEAT VARIABLES + MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+// RESPONSIVE CLASSES
+@import "responsive-utilities.less";
+
+// MEDIA QUERIES
+
+// UP TO LANDSCAPE PHONE
+@import "responsive-480px-max.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "responsive-767px-max.less";
+
+// Tablets to regular desktops
+@import "responsive-768px-979px.less";
+
+// Landscape tablets to large desktops
+@import "responsive-980px-1199px.less";
+
+// Large desktops
+@import "responsive-1200px-min.less";</div>
 </section>
 
 <section class="slide">
@@ -319,7 +390,7 @@ section {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
 }</div>
 	</div>
-		<div class="slide">
+		<div class="slide" style="margin-top:1em;">
 		<h3>Less</h3>
 		<div class="code" mode="css" style="display: none;">header nav {
   .horizontal(#555, #333);
@@ -350,8 +421,17 @@ section {
 </section>
 
 <section class="slide">
-	<h2>Loops &amp; Logic</h2>
+	<h2>Modular CSS = DRY Code</h2>
+	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
+	<ul>
+		<li class="slide">Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done. For Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
+		<li class="slide">Build yourself a pattern library like <a href="http://clearleft.github.com/clearless/">ClearLess by ClearLeft</a></li>
+		<li class="slide">How about all the gradients from <a href="http://lea.verou.me/css3patterns/">Lea Verou's CSS3 pattern gallery</a>? Download <a href="https://github.com/steveworkman/css-patterns-less">css-patterns-less</a><br/><img src="images/css3-gallery.png"></li>
+	</ul>
 
+	<!--
+	<p>Efficiency, Maintainability, Moving code from one project to another, sharing code in similar projects</p>
+-->
 </section>
 
 <section class="slide">
@@ -392,6 +472,57 @@ section {
    border: 1px solid red;
 }</div>
 	</div>
+</section>
+
+<section class="slide">
+	<h1>Now for the funkier stuff</h1>
+</section>
+
+<section class="slide">
+	<h2>Variable scoping</h2>
+	<div class="leftCol">
+		<h3>Less</h3>
+		<div class="code" mode="css" style="display: none;">@color: black;           
+.scoped { 
+  @color: white;
+  color: @color;        
+}                        
+.unscoped {   
+  // Black, as it should be  
+  color: @color;
+}</div>
+</div>
+	<div class="rightCol">
+		<h3>Sass</h3>
+		<div class="code" mode="css" style="display: none;">$color: black;           
+.scoped { 
+  $color: white;
+  color: $color;        
+}                        
+.unscoped {
+   // White, as it was overwritten above   
+  color: $color;
+}</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Loops &amp; Logic</h2>
+	<div class="code" mode="css" style="display:none;">/* Sample Sass "if" statement */
+@if lightness($color) > 30% {
+  background-color: #000;
+} @else {
+  background-color: #fff;
+}
+
+/* Sample Sass "for" loop */
+@for $i from 1px to 10px {
+  .border-#{i} {
+    border: $i solid blue;
+  }
+}</div>
+<div style="clear:both;"></div>
+<h3 class="slide usefulness">Sorry folks, Sass only</h3>
 </section>
 
 <section class="slide">
@@ -436,21 +567,12 @@ section {
 
 <section class="slide">
 	<h2>Compass</h2>
-</section>
-
-<section class="slide">
-	<h2>Modular CSS = DRY Code</h2>
-	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
+	<p><img src="images/compass-logo.png"></p>
 	<ul>
-		<li>Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done. For Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
-		<li>How about all the gradients from <a href="http://lea.verou.me/css3patterns/">Lea Verou's CSS3 pattern gallery</a>? Download <a href="https://github.com/steveworkman/css-patterns-less">css-patterns-less</a></li>
+		<li class="slide">All of those basic Less mixins rolled into one</li>
+		<li class="slide">Sprites, vendor prefixes, grids, gradients, it's all there</li>
+		<li class="slide">Also things not possible with less: extra math functions like log(), sqrt(), pow(), plus tint() and shade()</li>
 	</ul>
-	<div>
-		<img src="images/css3-gallery.png">
-	</div>
-	<!--
-	<p>Efficiency, Maintainability, Moving code from one project to another, sharing code in similar projects</p>
--->
 </section>
 
 <section class="slide">
@@ -460,30 +582,37 @@ section {
 </section>
 
 <section class="slide">
-	<h2>Modular CSS</h2>
-	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on modular CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
+	<h2>Object-Oriented CSS</h2>
+	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on Object-Oriented CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
 </section>
 
 <section class="slide">
-	<h2>Is one better than the other?</h2>
-	<p>Yes, but don't think like that</p>
+	<div class="vcenter">
+		<h2>Is one better than the other?</h1>
+		<h1 class="slide">Yes, but don't think like that</h2>
+	</div>
 </section>
 
 <section class="slide">
-	<h2>When to use?</h2>
-	<h1>All the time</h1>
-
+	<div class="vcenter">
+	<h2>When should I use it?</h2>
+	<h1 class="slide">All the time</h1>
+</div>
 </section>
 
 <section class="slide">
-	<h2>Tools</h2>
-	Yeoman
-	Codekit
-	Build scripts - Grunt, Ant, Jenkins, Teamcity
-</section>
-
-<section class="slide">
-	<h2>Get started</h2>
+	<h2>Get Started - Tools</h2>
+	<div class="leftThreeCol">
+		<figure><div style="height:400px"><img src="images/yeoman-logo.png"></div><figcaption><a href="http://yeoman.io">Yeoman</a></figcaption></figure>
+	</div>
+	<div class="middleThreeCol">
+		<figure><div style="height:400px"><img src="images/codekit-logo.png"></div><figcaption><a href="http://incident57.com/codekit/">Code Kit</a></figcaption></figure>
+	</div>
+	<div class="rightThreeCol">
+		<figure><div style="height:400px"><img src="images/grunt-logo.png"></div><figcaption><a href="http://gruntjs.com/">Grunt</a></figcaption></figure>
+	</div>
+	
+	
 </section>
 
 <section class="slide">

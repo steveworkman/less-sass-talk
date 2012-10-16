@@ -2,6 +2,7 @@
 uki_globalstylesheet.css	31.85KB	1493
 
 1706 Lines HTML
+177 JS
 
 
 2007 BBC News
@@ -21,7 +22,8 @@ emp.css 				9.43KB 	399
 61.93KB
 2270 lines
 
-2182 Lines of HTML
+5211 Lines of HTML
+652 + 22 + 3 + 167 + 2788 + 45 + 51 = 5628
 
 
 2012 BBC News - line sizes measured using css pretty printer
@@ -40,4 +42,7 @@ main.css 		28.94KB 	1828
 336.3KB 
 19712 lines
 
+68 + 55 + 339 + 904 + 18 + 201 + 385 + 542 + 403 + 552 + 549 + 8 + 222 + 1038 + 15 + 555 + 1125 + 541 + 627 + 23 + 4739 + 2 + 2 + 808 + 534 + 419 + 5063 + 145 + 1036
+
 3879 Lines of HTML
+20918 JS
