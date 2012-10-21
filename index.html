@@ -500,6 +500,10 @@ ul $li p {
 </section>
 
 <section class="slide">
+	<h1>Going deeper</h1>
+</section>
+
+<section class="slide">
 	<h2>Extensible classes</h2>
 	<div class="leftCol">
 		<h3>Less</h3>
@@ -540,10 +544,6 @@ ul $li p {
 </section>
 
 <section class="slide">
-	<h1>Now for the funkier stuff</h1>
-</section>
-
-<section class="slide">
 	<h2>Variable scoping</h2>
 	<div class="leftCol">
 		<h3>Less</h3>
@@ -557,7 +557,7 @@ ul $li p {
   color: @color;
 }</div>
 </div>
-	<div class="rightCol">
+	<div class="rightCol slide">
 		<h3>Sass</h3>
 		<div class="code" mode="css" style="display: none;">$color: black;           
 .scoped { 
@@ -565,14 +565,20 @@ ul $li p {
   color: $color;        
 }                        
 .unscoped {
-   // White, as it was overwritten above   
+   // White, as it was overwritten   
   color: $color;
 }</div>
 	</div>
 </section>
 
 <section class="slide">
+	<h1>Now for the funkier stuff</h1>
+</section>
+
+<section class="slide">
 	<h2>Loops &amp; Logic</h2>
+	<h3>Sass</h3>
+	<div class="leftCol">
 	<div class="code" mode="css" style="display:none;">/* Sample Sass "if" statement */
 @if lightness($color) > 30% {
   background-color: #000;
@@ -582,17 +588,45 @@ ul $li p {
 
 /* Sample Sass "for" loop */
 @for $i from 1px to 10px {
-  .border-#{i} {
+  .border-#{$i} {
     border: $i solid blue;
   }
 }</div>
-<div style="clear:both;"></div>
-<h3 class="slide usefulness">Sorry folks, Sass only</h3>
+</div>
+<div class="rightCol slide">
+	<div class="code" mode="css" style="display:none;">/* Sample Sass "for" loop */
+.border-1px {
+border: 1px solid blue; }
+
+.border-2px {
+border: 2px solid blue; }
+
+.border-3px {
+border: 3px solid blue; }
+
+.border-4px {
+border: 4px solid blue; }
+
+.border-5px {
+border: 5px solid blue; }
+
+.border-6px {
+border: 6px solid blue; }
+
+.border-7px {
+border: 7px solid blue; }
+
+.border-8px {
+border: 8px solid blue; }
+
+.border-9px {
+border: 9px solid blue; }</div>
+</div>
 </section>
 
 <section class="slide">
 	<h2>Generating Rules</h2>
-	<div class="leftCol"><h3>Less</h3>
+	<div style="clear:both;"><h3>Less</h3>
 	<div class="code" mode="less" style="display:none;">// Do this function while @index > 0
 .indentX (@index) when (@index > 0) {
   // Generate .indent-@index selector
@@ -610,7 +644,7 @@ ul $li p {
 }
 // Run the function
 .indentX (4);</div></div>
-	<div class="rightCol"><h3>CSS</h3>
+	<div style="clear:both;"><h3>CSS</h3>
 		<div class="code" mode="css" style="display:none;">.indent-4 {
   text-indent: 80px;
   background-color: #c7c7c7;
@@ -628,6 +662,57 @@ ul $li p {
   background-color: whitesmoke;
 }</div>
 	</div>
+</section>
+
+<section class="slide">
+	<h1>And then Less gets left behind</h1>
+</section>
+
+<section class="slide">
+	<h2>@content</h2>
+	<p>A mixin include can now accept a <strong>block of content</strong>. The style block will be passed to the mixin and can be placed at the point @content is used</p>
+	<div class="leftCol">
+		<h4>Sass</h4>
+	<div class="code" mode="css" style="display:none;">@mixin iphone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@include iphone {
+  body { color: red }
+}</div>
+</div>
+<div class="rightCol">
+	<h4>CSS</h4>
+	<div class="code" mode="css" style="display:none;">@media (max-width: 480px) {
+  body { color: red }
+}
+</div>
+</section>
+
+<section class="slide">
+	<h2>Directive Interpolation</h2>
+	<p>You can now output values of variables into standard CSS directives such a @font-face and @media</p>
+	<p>This allows for complicated mixins in a much simpler syntax</p>
+	<div class="code" mode="css" style="display:none;">$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+
+@media #{$media} and ($feature: $value) {
+  ...
+}
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Even more features in Sass 3.2</h2>
+	<ul>
+		<li class="slide">Mixins can be defined in a nested context i.e. within @media queries</li>
+		<li class="slide">CSS4 selectors are now supported</li>
+		<li class="slide">min() and max() math functions</li>
+		<li class="slide">Placeholder selectors: an extension to @extend and mixins</li>
+	</ul>
 </section>
 
 <section class="slide">
