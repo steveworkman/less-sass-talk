@@ -334,9 +334,6 @@ section nav a:hover, section nav a:focus {
 	</ul>
 </section>
 
-<section class="slide">
-
-</section>	
 
 <section class="slide">
 	<h2>$, or @</h2>
@@ -349,7 +346,7 @@ section nav a:hover, section nav a:focus {
 
 <section class="slide">
 	<h2>Bootstrap.less</h2>
-	<div class="code" mode="css" style="display: none;">// CSS Reset
+	<div class="code" mode="less" style="display: none;">// CSS Reset
 @import "reset.less";
 
 // Core variables and mixins
@@ -380,7 +377,7 @@ section nav a:hover, section nav a:focus {
 
 <section class="slide">
 	<h2>Bootstrap's responsive.less</h2>
-	<div class="code" mode="css" style="display: none;">// REPEAT VARIABLES + MIXINS
+	<div class="code" mode="less" style="display: none;">// REPEAT VARIABLES + MIXINS
 // -------------------------
 // Required since we compile the responsive stuff separately
 @import "variables.less"; // Modify this for custom colors, font-sizes, etc
@@ -425,7 +422,7 @@ section nav a:hover, section nav a:focus {
 	</div>
 		<div class="slide" style="margin-top:1em;">
 		<h3>Less</h3>
-		<div class="code" mode="css" style="display: none;">header nav {
+		<div class="code" mode="less" style="display: none;">header nav {
   .horizontal(#555, #333);
 }</div>
 	</div>
@@ -434,7 +431,7 @@ section nav a:hover, section nav a:focus {
 <section class="slide">
 	<h2>Mixins contd&hellip;</h2>
 		<h3>Mixins.less</h3>
-		<div class="code" mode="css" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
+		<div class="code" mode="less" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
     background-color: @endColor;
     background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
     background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
@@ -471,7 +468,7 @@ section nav a:hover, section nav a:focus {
 	<h2>Extensible classes</h2>
 	<div class="leftCol">
 		<h3>Less</h3>
-		<div class="code" mode="css" style="display: none;">.module-a {
+		<div class="code" mode="less" style="display: none;">.module-a {
   /* A bunch of stuff */
 }
 .module-b {
@@ -515,7 +512,7 @@ section nav a:hover, section nav a:focus {
 	<h2>Variable scoping</h2>
 	<div class="leftCol">
 		<h3>Less</h3>
-		<div class="code" mode="css" style="display: none;">@color: black;           
+		<div class="code" mode="less" style="display: none;">@color: black;           
 .scoped { 
   @color: white;
   color: @color;        
@@ -561,7 +558,7 @@ section nav a:hover, section nav a:focus {
 <section class="slide">
 	<h2>Generating Rules</h2>
 	<div class="leftCol"><h3>Less</h3>
-	<div class="code" mode="css" style="display:none;">// Do this function while @index > 0
+	<div class="code" mode="less" style="display:none;">// Do this function while @index > 0
 .indentX (@index) when (@index > 0) {
   // Generate .indent-@index selector
   (~".indent-@{index}") { .indent(@index); }
@@ -709,6 +706,7 @@ section nav a:hover, section nav a:focus {
 <!-- html mode (note html mode requires xml, css and javascript) -->
 <script src="extensions/codemirror/mode/xml/xml.js"></script>
 <script src="extensions/codemirror/mode/css/css.js"></script>
+<script src="extensions/codemirror/mode/less/less.js"></script>
 <script src="extensions/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
 <script src="extensions/codemirror/deck.codemirror.js"></script>
