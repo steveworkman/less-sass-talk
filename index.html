@@ -336,8 +336,88 @@ section nav a:hover, section nav a:focus {
 
 
 <section class="slide">
-	<h2>$, or @</h2>
+	<h2>$ or @</h2>
 	<img src="images/who-cares.jpg" alt="Who cares?">
+	<p>Neither implementation matches the current W3C spec, so why does it matter?</p>
+</section>
+
+<section class="slide">
+	<h2>It doesn't matter, just be aware</h2>
+	<div class="leftCol">
+		<h4>$ - CSS4 Parent Selector</h4>
+		<div class="code" mode="css" style="display:none;">/* Puts a border around the li */
+ul $li p { 
+  border: 1px solid #ccc; 
+}
+</div>
+	</div>
+	<div class="rightCol">
+		<h4>@ - Lots of usage</h4>
+		<div class="code" mode="css" style="display:none;">@media print {
+  #sidebar {
+    display:none;
+    }
+  }
+@font-face {
+  font-family: 'Museo500Regular';
+    url('../fonts/Museo500-Regular-webfont.woff') format('woff')
+    /* And lots more */
+}
+@keyframes identifier {
+  0% { top: 0; left: 0; }
+  50% { top: 50px; left: 50%; }
+  100% { top: 100px; left: 100%; }
+}</div>
+	</div>
+			<!--
+	Basically, @ is used in media queries, and has been used for years, all the way back to print styles. It's currently getting a lot of use from @keyframes, @import and @font-face, so it doesn't feel like the greatest choice compared to $ $ symbol isn't used yet but it will be in CSS 4 selectors for parent selectors
+-->
+</section>
+
+<section class="slide">
+	<h2>Mixins</h2>
+		<div>
+		<h3>CSS</h3>
+		<div class="code" mode="css" style="display: none;">header nav {
+  background-color: #333;
+  background-image: -moz-linear-gradient(left, #555, #333); // FF 3.6+
+  background-image: -ms-linear-gradient(left, #555, #333); // IE10
+  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#555), to(#333)); // Safari 4+, Chrome 2+
+  background-image: -webkit-linear-gradient(left, #555, #333); // Safari 5.1+, Chrome 10+
+  background-image: -o-linear-gradient(left, #555, #333); // Opera 11.10
+  background-image: linear-gradient(left, #555, #333); // Le standard
+  background-repeat: repeat-x;
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
+}</div>
+	</div>
+		<div class="slide" style="margin-top:1em;">
+		<h3>Less</h3>
+		<div class="code" mode="less" style="display: none;">header nav {
+  .horizontal(#555, #333);
+}</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Mixins contd&hellip;</h2>
+		<h3>Mixins.less</h3>
+		<div class="code" mode="less" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(left, @startColor, @endColor); // Le standard
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
+  }
+		</div>
+	</div>
+	<!--
+	<p>Mixins are very efficient - no effect of having large libraries of them on client download.</p>
+	<p>They enable modular CSS</p>
+-->
 </section>
 
 <section class="slide">
@@ -404,51 +484,6 @@ section nav a:hover, section nav a:focus {
 @import "responsive-1200px-min.less";</div>
 </section>
 
-<section class="slide">
-	<h2>Mixins</h2>
-		<div>
-		<h3>CSS</h3>
-		<div class="code" mode="css" style="display: none;">header nav {
-  background-color: #333;
-  background-image: -moz-linear-gradient(left, #555, #333); // FF 3.6+
-  background-image: -ms-linear-gradient(left, #555, #333); // IE10
-  background-image: -webkit-gradient(linear, 0 0, 100% 0, from(#555), to(#333)); // Safari 4+, Chrome 2+
-  background-image: -webkit-linear-gradient(left, #555, #333); // Safari 5.1+, Chrome 10+
-  background-image: -o-linear-gradient(left, #555, #333); // Opera 11.10
-  background-image: linear-gradient(left, #555, #333); // Le standard
-  background-repeat: repeat-x;
-  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
-}</div>
-	</div>
-		<div class="slide" style="margin-top:1em;">
-		<h3>Less</h3>
-		<div class="code" mode="less" style="display: none;">header nav {
-  .horizontal(#555, #333);
-}</div>
-	</div>
-</section>
-
-<section class="slide">
-	<h2>Mixins contd&hellip;</h2>
-		<h3>Mixins.less</h3>
-		<div class="code" mode="less" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
-    background-color: @endColor;
-    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
-    background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
-    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
-    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
-    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
-    background-image: linear-gradient(left, @startColor, @endColor); // Le standard
-    background-repeat: repeat-x;
-    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@endColor)); // IE9 and down
-  }
-		</div>
-	</div>
-	<!--
-	<p>Mixins are very efficient - no effect of having large libraries of them on client download.</p>
-	<p>They enable modular CSS</p>
--->
-</section>
 
 <section class="slide">
 	<h2>Modular CSS = DRY Code</h2>
