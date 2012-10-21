@@ -50,6 +50,25 @@
 			width: 31%;
 			padding: 2%;
 		}
+		.usefulness {
+			text-align: center !important;
+			margin-top: 1em !important;
+			font-size: 1.5em !important;
+		}
+		path {
+		    stroke: steelblue;
+		    stroke-width: 2;
+		    fill: none;
+		}
+		 
+		line {
+		    stroke: black;
+		}
+		 
+		text {
+		    font-family: Arial;
+		    font-size: 9pt;
+		}
 	</style>
 	
 	<!-- Required Modernizr file -->
@@ -62,7 +81,7 @@
 <section class="slide" id="title-slide">
 	<div class="vcenter">
 		<h1>CSS Pre-Processors</h1>
-		<h2>Making life easier for web developers</h2>
+		<h2>21<sup>st</sup> Century CSS</h2>
 		<h3>Steve Workman</h3>
 		<h4><a href="http://twitter.com/steveworkman">@steveworkman</a></h4>
 	</div>
@@ -75,7 +94,89 @@
 </section>
 
 <section class="slide">
-	<h2>CSS has evolved slowly</h2>
+	<h2>Who I am</h2>
+	<div class="leftCol">
+		<ul>
+			<li>Mobile &amp; Front-end Development Lead at PA Consulting Group</li>
+			<li>Organiser of London Web Standards since 2010</li>
+		</ul>
+	</div>
+	<div class="rightCol">
+		<img src="images/pa-logo.png" alt="PA Consulting Group Logo">
+	</div>
+	<div style="clear:both;"></div>
+	<p><img src="images/wow.png" alt="Weather Observation Website"></p>
+	<!-- <h2>Talk about me and PA</h2>
+		<p>What PA do as a firm, the MOD Panama project to develop a remote vehichle-based mine detection system using obsolete Land Rovers, which won the top prize at this year's Management Consulting Awards</p>
+	 -->
+</section>
+
+<section class="slide">
+	<h2>Say hello to the CSS WG</h2>
+	<figure>
+		<img src="http://www.glazman.org/weblog/dotclear/public/photos/CSSWG2010.jpg" alt="CSS Working Group 2012">
+		<figcaption>W3C CSS Working Group in 2010 - Photo by Daniel Glazman</figcaption>
+	</figure>
+	<!-- All major browser manufacturers and key vendors are represented. Big companies like Facebook, HP and RIM also provide their expertise to the group.
+	CSS Level 2 needed 9 years, from August 2002 to June 2011 to reach the Recommendation status. This was due to the fact that a few secondary features hold back the whole specification.-->
+</section>
+
+<section class="slide">
+	<h2>A new kind of dependency hell</h2>
+	<blockquote cite="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules">
+		<p>As a consequence of this design, feature modules couldn't progress unless the core modules progressed, and the core modules couldn't be complete until all the feature modules were complete. <strong>Nothing could move forward until everything moved forward</strong>. It was a new kind of dependency hell.</p>
+		<footer> - <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules">Elika J. Etemad AKA Fantasai, W3C</a>
+	</blockquote>
+	<!-- In order to realize the CSS3 system as a coherent singular whole, each module had to connect, via dependency links, to any other related modules...  -->
+</section>
+
+<section class="slide">
+	<h2>Taking a Modular Approach</h2>
+	<figure>
+		<img src="https://developer.mozilla.org/files/3623/CSS_Modules_and_Snapshots.png" alt="CSS Modules and snapshots">
+		<figcaption>CSS Modules and snapshots - MDN</figcaption>
+	</figure>
+	<!--
+	So, to move forward, the CSS specification was split up into modules and allowed to progress without the dependencies of other modules
+-->
+</section>
+
+
+<section class="slide">
+	<h2>There's lots of work going on</h2>
+
+	<div class="leftCol"><img src="images/css-specs-left.png" alt="Current CSS specification statuses"/></div>
+	<div class="rightCol"><img src="images/css-specs-right.png" alt="Current CSS Specification statuses" /></div>
+	<!--
+	What that means is that there's a lot of different things happening in CSS all at the same time. This table gives you a good idea of all the specs developing right now, crazy and defunct or not.
+	Very few of these actually improve CSS as a programming language, which hasn't changed significantly since it was first introduced.
+-->
+</section>
+
+<section class="slide">
+	<h2>Calculations (CSS Values)</h2>
+	<iframe style="width:100%; height:350px" src="http://caniuse.com/calc/embed/eras=-2,"></iframe>
+	<h3>Example</h3>
+<div class="code" mode="css" style="display: none;">section {
+  float: left;
+  margin: 1em; border: solid 1px;
+  // one col of 3 col layout minus 1em padding each side and 1px border each side
+  width: calc(100%/3 - 2*1em - 2*1px); 
+}</div>
+</section>
+
+<section class="slide">
+	<h2>CSS <strike>Variables</strike> Cascading Variables</h2>
+
+<blockquote><strong>The proposed spec is NOT about variables</strong> and I seriously wonder if we should not change the title of the document. You may call the feature it introduces "variables" but at the deeper level, that's not about variables.</blockquote>
+<cite href="http://www.glazman.org/weblog/dotclear/index.php?post/2012/08/17/CSS-Variables%2C-why-we-drop-the-%24foo-notation">Daniel Glazman, CSSWG Co-Chair, August 2012</cite>
+<p>[CSS Cascading Variables is] a family of custom author-defined properties known collectively as <strong>custom properties</strong>, which allow an author to assign arbitrary values to a property with an author-chosen name, and <strong>variables</strong>, which allow an author to then use those values in other properties elsewhere in the document.</p>
+<p>First requested in <em>1998</em>, first W3C proposal: <em><a href="http://disruptive-innovations.com/zoo/cssvariables/">2008</a></em>, first public draft <em><a href="http://www.w3.org/TR/2012/WD-css-variables-20120410/">April 2012</a></em></p>
+<!-- Focus on the fact that it has taken a decade to even be realised in a draft, and 4 years to get to it's first public draft, which then changed wholesale 4 months later -->
+</section>
+
+<section class="slide">
+	<h2>A decade of BBC News</h2>
 	<div class=" slide">
 		<div class="leftThreeCol">
 			<h3>2001</h3>
@@ -84,7 +185,7 @@
 				Total File size: <strong>31.85KB</strong> (1 file)</p>
 		</div>
 	</div>
-	<div class=" slide">
+	<div class="slide">
 		<div class="middleThreeCol">
 			<h3>2007</h3>
 			<img src="images/bbc-news-2007.png" style="width:100%" alt="BBC News 2007"/>
@@ -92,7 +193,7 @@
 				Total File size: <strong>61.93KB</strong> (12 files)</p>
 		</div>
 	</div>
-	<div class=" slide">
+	<div class="slide">
 		<div class="rightThreeCol">
 			<h3>2012</h3>
 			<img src="images/bbc-news-2012.PNG" style="width:100%" alt="BBC News 2012"/>
@@ -100,7 +201,7 @@
 				Total File size: <strong>336.30KB</strong> (12 files)</p>
 		</div>
 	</div>
-	<!-- <h2>CSS evolution</h2>
+	<!-- <h2>Decade of BBC News</h2>
 		<p>The last decade has taken been a very slow period of evolution for CSS. In 2001, websites were simple, connection speed was low, ISDN at best for most, and CSS had reached level 2. BBC news was ~1500 lines of CSS.<br/> IE6 being the only browser, web standards didn't really move forward until Firefox came around in 2005, and because of its dominance, IE6 took a long time to disappear. So in 2007, the Bbc news site hadn't really changed and its CSS was around 50% bigger. <br/>Since then, bigger screens, the death of IE6 in the western world, and CSS3 have moved the web on. Today, BBC News website is nearly 20,000 lines of CSS, which is a lot for any web site.
 		<ul><li>Mention acronymn is Cascading Style Sheets</li>
 			<li>Don't read the numbers, it should be "around 1500, 50% more, 2200, and nearly 20000"</li>
@@ -109,26 +210,17 @@
 	 -->
 </section>
 
-
 <section class="slide">
-	<h2>Language improvements move even slower&hellip;</h2>
-	<ul class="leftCol">
-		<li>CSS 3 selectors brought new ways to select elements</li>
-		<li><a href="http://www.w3.org/TR/css-variables/">CSS Variables</a> has been a working draft since 2004 but is only supported in Webkit nightly builds</li>
-		<li><a href="http://www.w3.org/TR/css3-values/">Math functions</a> like calc() have support in Firefox (4+)*, Chrome (19+)* and IE9, and has been a working draft for <a href="http://www.w3.org/TR/2001/WD-css3-values-20010713/">11 years!</a> It's currently at Last Call.</li>
-	</ul>
-	<div class="rightCol">
-		<img src="images/css-specs.PNG" alt="Current CSS specification statuses"/>
-	</div>
-	<!--
-	<ul><li>There have been attempts to bring the language up to date</li>
-		<li>On the right is the current CSS spec statuses, these are all the modules being worked on.</li>
-	</ul>
--->
+	<h2>How much code?</h2>
+	<img src="images/bbcnewsgraph.png" alt="Graph of the previous slide">
+</section>
+<section class="slide">
+	<h2>How much code?</h2>
+	<img src="images/bbcnewsgraph-js.png" alt="Graph of the previous slide">
 </section>
 
 <section class="slide">
-	<h2>Pressed for time?</h2>
+	<h2>Why do we need these things?</h2>
 	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
 	<p><a href="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"><em>Dilbert.com</em></a></p>
 	<!--
@@ -139,23 +231,32 @@
 
 <section class="slide">
 	<h2>Enter CSS Pre-processors</h2>
-	<div>
-		<div class="leftCol">
-			<p><img src="images/less_logo.png" style="" alt="Less CSS"/></p>
-			<p><img src="images/Sass_Logo.gif" style="" alt="SASS"/></p>
+		<div>
+			<p  class="leftCol"><img src="images/less_logo.png" style="" alt="Less CSS"/></p>
+			<p  class="rightCol"><img src="images/Sass_Logo.gif" style="" alt="SASS"/></p>
 		</div>
-		<div class="rightCol">
+		<div style="clear:both;">
 			<h3>Both feature</h3>
-			<ul>
-				<li>Nested rules</li>
-				<li>Variables</li>
-				<li>Mixins</li>
-				<li>Math functions</li>
-				<li>Extensions</li>
-				<li>Works with regular CSS</li>
-			</ul>
+			<div class="leftThreeCol">
+				<ul>
+					<li>Nested rules</li>
+					<li>Variables</li>
+				</ul>
+			</div>
+			<div class="middleThreeCol">
+				<ul>
+					<li>Mixins</li>
+					<li>Logic &amp; Loops</li>
+				</ul>
+			</div>
+			<div class="rightThreeCol">
+				<ul>
+					<li>Math functions</li>
+					<li>Extensions</li>
+					<li>Works with regular CSS</li>
+				</ul>
+			</div>
 		</div>
-	</div>
 	<!--<ul><li>Sass stands for Syntactically Awesome StyleSheets</li>
 			<li>Less just means Less CSS</li>
 			<li>DON'T JUST READ THE THINGS ON THE RIGHT</li>
@@ -164,10 +265,11 @@
 </section>
 
 <section class="slide">
-	<h2>Nesting &amp; Variables</h2>
-
+	<h2>Nesting Rules</h2>
+		<div>
 	<div class="leftCol">
 		<h3>CSS</h3>
+
 		<div class="code" mode="css" style="display: none;">section { 
   margin: 10px;
 }
@@ -183,23 +285,104 @@ section nav a:hover, section nav a:focus {
 	</div>
 	<div class="rightCol">
 		<h3>SASS</h3>
-		<div class="code" mode="css" style="display: none;">$linkColor: #0982C1;
-
-section {
+		<div class="code" mode="css" style="display: none;">section {
   margin:10px;
   nav {
     height:25px;
     a, a:visited {
-      color: $linkColor;
+      color: #0982C1;
       &:hover, &:focus {
         text-decoration:underline;
       }
     }
   }
 }</div>
+</div>
+</section>
+
+<section class="slide">
+	<h2>Nesting is really useful for @media queries</h2>
+	<div class="leftCol">
+		<h3>Standard CSS</h3>
+		<div class="code" mode="css" style="display:none;">.some-class {
+   /* Default styling */
+}
+
+/* Hundreds of lines of CSS */
+
+@media (max-width: 979px) {
+  .some-class {
+    /* Responsive styles */
+  }
+}
+@media (min-width: 980px) {
+  .some-class {
+    /* Desktop responsive styles */
+  }
+}</div>
 	</div>
-	<!--
-	<p>Tell the story about the manager wanting a different colour blue, then asking for another. 2 second change or 2 hours?</p>
+	<div class="rightCol">
+		<h3>SASS</h3>
+		<div class="code" mode="css" style="display:none;">.some-class {
+  /* Default styling */
+  @media (max-width: 979px) {
+    /* Responsive styles */
+  }
+  @media (min-width: 980px) {
+    /* Desktop responsive styles */
+  }
+}</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Variables</h2>
+	<ul>
+		<li class="slide">Define a property/value/string anywhere</li>
+		<li class="slide">Use it again</li>
+		<li class="slide">...</li>
+		<li class="slide">Profit!</li>
+		<li class="slide">Less uses @, Sass uses $</li>
+	</ul>
+</section>
+
+
+<section class="slide">
+	<h2>$ or @</h2>
+	<img src="images/who-cares.jpg" alt="Who cares?">
+	<p>Neither implementation matches the current W3C spec, so why does it matter?</p>
+</section>
+
+<section class="slide">
+	<h2>It doesn't matter, just be aware</h2>
+	<div class="leftCol">
+		<h4>$ - CSS4 Parent Selector</h4>
+		<div class="code" mode="css" style="display:none;">/* Puts a border around the li */
+ul $li p { 
+  border: 1px solid #ccc; 
+}
+</div>
+	</div>
+	<div class="rightCol">
+		<h4>@ - Lots of usage</h4>
+		<div class="code" mode="css" style="display:none;">@media print {
+  #sidebar {
+    display:none;
+    }
+  }
+@font-face {
+  font-family: 'Museo500Regular';
+    url('../fonts/Museo500-Regular-webfont.woff') format('woff')
+    /* And lots more */
+}
+@keyframes identifier {
+  0% { top: 0; left: 0; }
+  50% { top: 50px; left: 50%; }
+  100% { top: 100px; left: 100%; }
+}</div>
+	</div>
+			<!--
+	Basically, @ is used in media queries, and has been used for years, all the way back to print styles. It's currently getting a lot of use from @keyframes, @import and @font-face, so it doesn't feel like the greatest choice compared to $ $ symbol isn't used yet but it will be in CSS 4 selectors for parent selectors
 -->
 </section>
 
@@ -219,18 +402,18 @@ section {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",#555,#333)); // IE9 and down
 }</div>
 	</div>
-		<div class="slide">
+		<div class="slide" style="margin-top:1em;">
 		<h3>Less</h3>
-		<div class="code" mode="css" style="display: none;">header nav {
+		<div class="code" mode="less" style="display: none;">header nav {
   .horizontal(#555, #333);
 }</div>
 	</div>
 </section>
 
 <section class="slide">
-	<h2>Mixins contd...</h2>
+	<h2>Mixins contd&hellip;</h2>
 		<h3>Mixins.less</h3>
-		<div class="code" mode="css" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
+		<div class="code" mode="less" style="display: none;">.horizontal(@startColor: #555, @endColor: #333) {
     background-color: @endColor;
     background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
     background-image: -ms-linear-gradient(left, @startColor, @endColor); // IE10
@@ -250,28 +433,453 @@ section {
 </section>
 
 <section class="slide">
+	<h1>Clever @importing is the key</h1>
+</section>
+
+<section class="slide">
+	<h2>Bootstrap.less</h2>
+	<div class="code" mode="less" style="display: none;">// CSS Reset
+@import "reset.less";
+
+// Core variables and mixins
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+// Grid system and page structure
+@import "scaffolding.less";
+@import "grid.less";
+@import "layouts.less";
+@import "media-grid.less";
+
+// Base CSS
+@import "type.less";
+@import "code.less";
+@import "forms.less";
+@import "tables.less";
+
+// Components: common
+@import "sprites.less";
+@import "dropdowns.less";
+@import "wells.less";
+@import "component-animations.less";
+@import "close.less";
+
+...</div>
+</section>
+
+<section class="slide">
+	<h2>Bootstrap's responsive.less</h2>
+	<div class="code" mode="less" style="display: none;">// REPEAT VARIABLES + MIXINS
+// -------------------------
+// Required since we compile the responsive stuff separately
+@import "variables.less"; // Modify this for custom colors, font-sizes, etc
+@import "mixins.less";
+
+// RESPONSIVE CLASSES
+@import "responsive-utilities.less";
+
+// MEDIA QUERIES
+
+// UP TO LANDSCAPE PHONE
+@import "responsive-480px-max.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "responsive-767px-max.less";
+
+// Tablets to regular desktops
+@import "responsive-768px-979px.less";
+
+// Landscape tablets to large desktops
+@import "responsive-980px-1199px.less";
+
+// Large desktops
+@import "responsive-1200px-min.less";</div>
+</section>
+
+<section class="slide">
 	<h2>Modular CSS = DRY Code</h2>
 	<p>Re-using CSS has always between projects has always been a challenge, tips and tricks from one project get lost and re-written for another. CSS pre-processors can change that</p>
 	<ul>
-		<li>Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done. For Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
-		<li>How about all the gradients from <a href="http://lea.verou.me/css3patterns/">Lea Verou's CSS3 pattern gallery</a>? Download <a href="https://github.com/steveworkman/css-patterns-less">css-patterns-less</a></li>
+		<li class="slide">Want a responsive grid and a bunch of gradients? <a href="https://github.com/twitter/bootstrap/blob/master/less/grid.less">grid.less</a> and <a href="https://github.com/twitter/bootstrap/blob/master/less/mixins.less">mixins.less</a> from Twitter Bootstrap and you're done. For Sass? Try <a href="http://bravedick.github.com/mooxins/">Mooxins</a></li>
+		<li class="slide">Build yourself a pattern library like <a href="http://clearleft.github.com/clearless/">ClearLess by ClearLeft</a></li>
+		<li class="slide">How about all the gradients from <a href="http://lea.verou.me/css3patterns/">Lea Verou's CSS3 pattern gallery</a>? Download <a href="https://github.com/steveworkman/css-patterns-less">css-patterns-less</a><br/><img src="images/css3-gallery.png"></li>
 	</ul>
-	<div>
-		<img src="images/css3-gallery.png">
-	</div>
+
 	<!--
 	<p>Efficiency, Maintainability, Moving code from one project to another, sharing code in similar projects</p>
 -->
 </section>
+
 <section class="slide">
-	<blockquote cite="http://www.zurb.com/article/1031/stop-the-pain-of-vanilla-css-and-get-reli">
-		<p>It streamlines the whole process, and is easier to read and debug. It takes only a few minutes to set up but the time savings are immense.</p>
-		<p><cite>Ghaida Zahran, designer at ZURB</cite></p>
-	</blockquote>
-	<blockquote cite="http://favstar.fm/users/Malarkey/status/114002481066938368">
-		<p>I once wrote that there was no need to use a CSS pre-processor like LESS or SASS. I was wrong. Very sorry&hellip;</p>
-		<p><cite>Andy Clarke aka <a href="http://twitter.com/malarkey">@malarkey</a></cite></p>
-	</blockquote>
+	<h2>Minimal CSS</h2>
+	<p>If you've got a page that only needs certain parts of the CSS, give them that stylesheet only.
+	Mobile site? only give them the mobile styles but keep the vars and mixins</p>
+</section>
+
+<section class="slide">
+	<h1>Going deeper</h1>
+</section>
+
+<section class="slide">
+	<h2>Extensible classes</h2>
+	<div class="leftCol">
+		<h3>Less</h3>
+		<div class="code" mode="less" style="display: none;">.module-a {
+  /* A bunch of stuff */
+}
+.module-b {
+  /* Copies everything from .module-a */
+   .module-a();
+   border: 1px solid red;
+}</div>
+
+<div class="code" mode="css" style="display: none;">.module-a {
+  /* A bunch of stuff */
+}
+.module-b {
+  /* A bunch of stuff */
+   border: 1px solid red;
+}</div>
+</div>
+	<div class="rightCol">
+		<h3>Sass</h3>
+		<div class="code" mode="css" style="display: none;">.module-a {
+   /* A bunch of stuff */
+}
+.module-b {
+   /* extends selectors, not code */
+   @extend .module-a;
+   border: 1px solid red;
+}</div>
+<div class="code" mode="css" style="display: none;">.module-a, .module-b {
+   /* A bunch of stuff */
+}
+.module-b {
+   border: 1px solid red;
+}</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Variable scoping</h2>
+	<div class="leftCol">
+		<h3>Less</h3>
+		<div class="code" mode="less" style="display: none;">@color: black;           
+.scoped { 
+  @color: white;
+  color: @color;        
+}                        
+.unscoped {   
+  // Black, as it should be  
+  color: @color;
+}</div>
+</div>
+	<div class="rightCol slide">
+		<h3>Sass</h3>
+		<div class="code" mode="css" style="display: none;">$color: black;           
+.scoped { 
+  $color: white;
+  color: $color;        
+}                        
+.unscoped {
+   // White, as it was overwritten   
+  color: $color;
+}</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h1>Now for the funkier stuff</h1>
+</section>
+
+<section class="slide">
+	<h2>Loops &amp; Logic</h2>
+	<h3>Sass</h3>
+	<div class="leftCol">
+	<div class="code" mode="css" style="display:none;">/* Sample Sass "if" statement */
+@if lightness($color) > 30% {
+  background-color: #000;
+} @else {
+  background-color: #fff;
+}
+
+/* Sample Sass "for" loop */
+@for $i from 1px to 10px {
+  .border-#{$i} {
+    border: $i solid blue;
+  }
+}</div>
+</div>
+<div class="rightCol slide">
+	<div class="code" mode="css" style="display:none;">/* Sample Sass "for" loop */
+.border-1px {
+border: 1px solid blue; }
+
+.border-2px {
+border: 2px solid blue; }
+
+.border-3px {
+border: 3px solid blue; }
+
+.border-4px {
+border: 4px solid blue; }
+
+.border-5px {
+border: 5px solid blue; }
+
+.border-6px {
+border: 6px solid blue; }
+
+.border-7px {
+border: 7px solid blue; }
+
+.border-8px {
+border: 8px solid blue; }
+
+.border-9px {
+border: 9px solid blue; }</div>
+</div>
+</section>
+
+<section class="slide">
+	<h2>Generating Rules</h2>
+	<div style="clear:both;"><h3>Less</h3>
+	<div class="code" mode="less" style="display:none;">// Do this function while @index > 0
+.indentX (@index) when (@index > 0) {
+  // Generate .indent-@index selector
+  (~".indent-@{index}") { .indent(@index); }
+  .indentX(@index - 1);
+}
+// Do this function when @index == 0
+.indentX (0) {}
+
+// Mixin to fill the indent with
+.indent (@columns) {
+  @colsminusone: @columns - 1;
+  text-indent: @columns * 20px;
+  background-color: darken(#f5f5f5, @colsminusone*6%);
+}
+// Run the function
+.indentX (4);</div></div>
+	<div style="clear:both;"><h3>CSS</h3>
+		<div class="code" mode="css" style="display:none;">.indent-4 {
+  text-indent: 80px;
+  background-color: #c7c7c7;
+}
+.indent-3 {
+  text-indent: 60px;
+  background-color: #d6d6d6;
+}
+.indent-2 {
+  text-indent: 40px;
+  background-color: #e6e6e6;
+}
+.indent-1 {
+  text-indent: 20px;
+  background-color: whitesmoke;
+}</div>
+	</div>
+</section>
+
+<section class="slide">
+	<h1>And then Less gets left behind</h1>
+</section>
+
+<section class="slide">
+	<h2>@content</h2>
+	<p>A mixin include can now accept a <strong>block of content</strong>. The style block will be passed to the mixin and can be placed at the point @content is used</p>
+	<div class="leftCol">
+		<h4>Sass</h4>
+	<div class="code" mode="css" style="display:none;">@mixin iphone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
+
+@include iphone {
+  body { color: red }
+}</div>
+</div>
+<div class="rightCol">
+	<h4>CSS</h4>
+	<div class="code" mode="css" style="display:none;">@media (max-width: 480px) {
+  body { color: red }
+}
+</div>
+</section>
+
+<section class="slide">
+	<h2>Directive Interpolation</h2>
+	<p>You can now output values of variables into standard CSS directives such a @font-face and @media</p>
+	<p>This allows for complicated mixins in a much simpler syntax</p>
+	<div class="code" mode="css" style="display:none;">$media: screen;
+$feature: -webkit-min-device-pixel-ratio;
+$value: 1.5;
+
+@media #{$media} and ($feature: $value) {
+  ...
+}
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Even more features in Sass 3.2</h2>
+	<ul>
+		<li class="slide">Mixins can be defined in a nested context i.e. within @media queries</li>
+		<li class="slide">CSS4 selectors are now supported</li>
+		<li class="slide">min() and max() math functions</li>
+		<li class="slide">Placeholder selectors: an extension to @extend and mixins</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<h2>Compass</h2>
+	<p><img src="images/compass-logo.png"></p>
+	<ul>
+		<li class="slide">All of those basic Less mixins rolled into one</li>
+		<li class="slide">Sprites, vendor prefixes, grids, gradients, it's all there</li>
+		<li class="slide">Also things not possible with less: extra math functions like log(), sqrt(), pow(), plus tint() and shade()</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<div class="vcenter">
+		<h1>Wait! It's not over</h1>
+		<h2 class="slide">Less 1.3.1 came out 3 days ago</h2>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>A big (little) update</h2>
+	<ul>
+		<li class="slide">Much improved rule engine: Bootstrap compiled went from 6221 lines to 5270. <strong>~18% improvement</strong></li>
+		<li class="slide">New colour functions: tint, shade, multiply, screen, overlay, hardlight, difference, exclusion, average, negation, softlight, red, green, blue, contrast</li>
+		<li class="slide">Directive Interpolation, just like Sass 3.2</li>
+		<li class="slide">Supports new value units dpi, vmin, vm, dppx and dpcm</li>
+		<li class="slide">Still doesn't resolve the extensible class issue</li>
+	</ul>
+</section>
+
+<section class="slide">
+	<div class="vcenter">
+		<h2>Is one better than the other?</h2>
+		<h1 class="slide">Yes, but don't think like that</h1>
+	</div>
+</section>
+<section class="slide">
+	<h2>Is one better than the other?</h2>
+	<div class="leftThreeCol">
+		<h3>Sass</h3>
+		<p><img src="images/ferrari-458.jpg" alt="Sass - a Ferrari 458" style="box-sizing:border-box; padding: 10px;"></p>
+	</div>
+	<div class="middleThreeCol">
+		<h3>Less</h3>
+		<p><img src="images/porsche-911.jpg" alt="Less - a Porsche 911" style="box-sizing:border-box; padding: 10px;"></p>
+	</div>
+	<div class="rightThreeCol">
+		<h3>CSS</h3>
+		<p><img src="images/lada.gif" alt="CSS - a Lada" style="box-sizing:border-box; padding: 10px;"></p>
+	</div>
+</section>
+
+<section class="slide">
+	<div class="vcenter">
+	<h2>When should I use it?</h2>
+	<h1 class="slide">All the time</h1>
+</div>
+</section>
+
+<section class="slide">
+	<h2>Get Started</h2>
+	<h3>Command line</h3>
+	<div class="leftCol">
+		<h4>Less</h4>
+		<pre><code>npm install -g less
+lessc style.less style.css</code></pre>
+	</div>
+	<div class="rightCol">
+		<h4>Sass</h4>
+		<pre><code>gem install sass
+gem install compass
+sass --watch style.scss:style.css</code></pre>
+	</div>
+	<div style="clear:both;"></div>
+	<div class="slide">
+		<h3>.NET</h3>
+		<div class="leftCol">
+			<h4>dotless</h4>
+			<p>Direct port of Less to .NET</p>
+			<pre><code>PM> Install-Package dotless</code></pre>
+		</div>
+		<div class="rightCol">
+			<h4>Bundle Transformer: Sass and SCSS</h4>
+			<p>Translator adaptor for the basic Ruby library</p>
+			<pre><code>PM> Install-Package BundleTransformer.SassAndScss</code></pre>
+		</div>
+		<p style="clear:both;">Both allow for .less/.scss files to be read at runtime and bundled &amp; minified for production</p>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Get Started contd...</h2>
+	<h3>PHP</h3>
+	<div class="leftCol">
+		<h4>Less</h4>
+		<p><a href="http://leafo.net/lessphp/">lessphp</a> - a compiler for LESS written in PHP</p>
+		<pre><code>require "lessc.inc.php";
+$less = new lessc;
+echo $less->compile(".block { padding: 3 + 4px }");</code></pre>
+	</div>
+	<div class="rightCol">
+		<h4>Sass</h4>
+		<p><a href="http://www.phpsass.com/">PHPSass</a> - a compiler for Sass written in PHP, a fork of the older <a href="http://code.google.com/p/phamlp">PHamlP</a></p>
+		<pre><code>require_once('SassParser.php');
+$parser = new SassParser($settings);
+$result = $parser->toCss($input);</code></pre>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Get Started contd...</h2>
+	<h3>Wordpress</h3>
+	<p>Theme designers can write their CSS in Less or Sass and make use of in-theme bootstrappers so no plugins are required
+		<h4>Less</h4>
+		<p>Use <a href="http://wordpress.org/extend/plugins/wp-less/">WP-LESS</a></p>
+		<pre><code>// wp-content/themes/your-theme/functions.php
+require dirname(__FILE__) . ‘/vendor/wp-less/bootstrap-for-theme.php’;
+$less = WPLessPlugin::getInstance();
+$less->dispatch();</code></pre>
+		<h4>Sass</h4>
+		<p>Use <a href="https://github.com/sanchothefat/wp-sass">WP-SASS</a></p>
+		<pre><code>require_once( 'wp-sass/wp-sass.php' );
+// enqueue a .scss style sheet
+wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.scss' );</code></pre>
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Get Started Contd...</h2>
+	<h3>Javascript</h3>
+	<p>Less is written in JavaScript, so you can run it client-side</p>
+	<pre><code>&lt;link rel="stylesheet/less" href="main.less" type="text/css"&gt;
+&lt;script src="less.js" type="text/javascript"&gt;&lt;/script&gt;</code></pre>
+	<div class="slide">
+		<blockquote cite="http://stackoverflow.com/questions/4436643/is-there-a-sass-js-something-like-less-js">So while it's a little more setup to get started, we (the sass core team) think that server side compilation is the best long term approach. Similarly, the less developers prefer server side compilation for production stylesheets.<footer> - <a href="http://stackoverflow.com/questions/4436643/is-there-a-sass-js-something-like-less-js">Chris Eppstein on StackOverflow</a></footer></blockquote>
+		
+	</div>
+</section>
+
+<section class="slide">
+	<h2>Get Started - Tools</h2>
+	<div class="leftThreeCol">
+		<figure><div style="height:400px"><img src="images/grunt-logo.png"></div><figcaption><a href="http://gruntjs.com/">Grunt</a></figcaption></figure>
+	</div>
+	<div class="middleThreeCol">
+		<figure><div style="height:400px"><img src="images/yeoman-logo.png"></div><figcaption><a href="http://yeoman.io">Yeoman</a></figcaption></figure>
+	</div>
+	<div class="rightThreeCol">
+		<figure><div style="height:400px"><img src="images/codekit-logo.png"></div><figcaption><a href="http://incident57.com/codekit/">Code Kit</a></figcaption></figure>
+	</div>
 </section>
 
 <section class="slide">
@@ -322,7 +930,6 @@ section {
 <script src="core/deck.core.js"></script>
 
 <!-- Extension JS files. Add or remove as needed. -->
-<script src="core/deck.core.js"></script>
 <script src="extensions/hash/deck.hash.js"></script>
 <script src="extensions/menu/deck.menu.js"></script>
 <script src="extensions/goto/deck.goto.js"></script>
@@ -336,6 +943,7 @@ section {
 <!-- html mode (note html mode requires xml, css and javascript) -->
 <script src="extensions/codemirror/mode/xml/xml.js"></script>
 <script src="extensions/codemirror/mode/css/css.js"></script>
+<script src="extensions/codemirror/mode/less/less.js"></script>
 <script src="extensions/codemirror/mode/htmlmixed/htmlmixed.js"></script>
 
 <script src="extensions/codemirror/deck.codemirror.js"></script>
