@@ -113,7 +113,7 @@
 		<img src="http://www.glazman.org/weblog/dotclear/public/photos/CSSWG2010.jpg" alt="CSS Working Group 2012">
 		<figcaption>W3C CSS Working Group in 2010 - Photo by Daniel Glazman</figcaption>
 	</figure>
-	<!-- All major browser manufacturers and key vendors are represented. Big companies like Facebook also provide their expertise to the group.
+	<!-- All major browser manufacturers and key vendors are represented. Big companies like Facebook, HP and RIM also provide their expertise to the group.
 	CSS Level 2 needed 9 years, from August 2002 to June 2011 to reach the Recommendation status. This was due to the fact that a few secondary features hold back the whole specification.-->
 </section>
 
@@ -286,12 +286,41 @@ section nav a:hover, section nav a:focus {
   }
 }</div>
 </div>
-<div style="clear:both;"></div>
-<h3 class="slide usefulness">Useful, but not amazing</h3>
+</section>
+
+<section class="slide">
+	<h2>Nesting is really useful for @media queries</h2>
+	<div class="leftCol">
+		<h3>Standard CSS</h3>
+		<div class="code" mode="css" style="display:none;">.some-class {
+   /* Default styling */
+}
+
+/* Hundreds of lines of CSS */
+
+@media (max-width: 979px) {
+  .some-class {
+    /* Responsive styles */
+  }
+}
+@media (min-width: 980px) {
+  .some-class {
+    /* Desktop responsive styles */
+  }
+}</div>
 	</div>
-	<!--
-	<p>Tell the story about the manager wanting a different colour blue, then asking for another. 2 second change or 2 hours?</p>
--->
+	<div class="rightCol">
+		<h3>SASS</h3>
+		<div class="code" mode="css" style="display:none;">.some-class {
+  /* Default styling */
+  @media (max-width: 979px) {
+    /* Responsive styles */
+  }
+  @media (min-width: 980px) {
+    /* Desktop responsive styles */
+  }
+}</div>
+	</div>
 </section>
 
 <section class="slide">
@@ -304,6 +333,10 @@ section nav a:hover, section nav a:focus {
 		<li class="slide">Less uses @, Sass uses $</li>
 	</ul>
 </section>
+
+<section class="slide">
+
+</section>	
 
 <section class="slide">
 	<h2>$, or @</h2>
