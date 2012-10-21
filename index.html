@@ -104,7 +104,11 @@
 	<div class="rightCol">
 		<img src="images/pa-logo.png" alt="PA Consulting Group Logo">
 	</div>
-
+	<div style="clear:both;"></div>
+	<p><img src="images/wow.png" alt="Weather Observation Website"></p>
+	<!-- <h2>Talk about me and PA</h2>
+		<p>What PA do as a firm, the MOD Panama project to develop a remote vehichle-based mine detection system using obsolete Land Rovers, which won the top prize at this year's Management Consulting Awards</p>
+	 -->
 </section>
 
 <section class="slide">
@@ -118,14 +122,22 @@
 </section>
 
 <section class="slide">
+	<h2>A new kind of dependency hell</h2>
+	<blockquote cite="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules">
+		<p>As a consequence of this design, feature modules couldn't progress unless the core modules progressed, and the core modules couldn't be complete until all the feature modules were complete. <strong>Nothing could move forward until everything moved forward</strong>. It was a new kind of dependency hell.</p>
+		<footer> - <a href="http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules">Elika J. Etemad AKA Fantasai, W3C</a>
+	</blockquote>
+	<!-- In order to realize the CSS3 system as a coherent singular whole, each module had to connect, via dependency links, to any other related modules...  -->
+</section>
+
+<section class="slide">
 	<h2>Taking a Modular Approach</h2>
 	<figure>
 		<img src="https://developer.mozilla.org/files/3623/CSS_Modules_and_Snapshots.png" alt="CSS Modules and snapshots">
 		<figcaption>CSS Modules and snapshots - MDN</figcaption>
 	</figure>
 	<!--
-
-	Beijing Doctorine - http://fantasai.inkedblade.net/weblog/2011/inside-csswg/modules
+	So, to move forward, the CSS specification was split up into modules and allowed to progress without the dependencies of other modules
 -->
 </section>
 
@@ -136,9 +148,8 @@
 	<div class="leftCol"><img src="images/css-specs-left.png" alt="Current CSS specification statuses"/></div>
 	<div class="rightCol"><img src="images/css-specs-right.png" alt="Current CSS Specification statuses" /></div>
 	<!--
-	<ul><li>There have been attempts to bring the language up to date</li>
-		<li>On the right is the current CSS spec statuses, these are all the modules being worked on.</li>
-	</ul>
+	What that means is that there's a lot of different things happening in CSS all at the same time. This table gives you a good idea of all the specs developing right now, crazy and defunct or not.
+	Very few of these actually improve CSS as a programming language, which hasn't changed significantly since it was first introduced.
 -->
 </section>
 
@@ -161,16 +172,7 @@
 <cite href="http://www.glazman.org/weblog/dotclear/index.php?post/2012/08/17/CSS-Variables%2C-why-we-drop-the-%24foo-notation">Daniel Glazman, CSSWG Co-Chair, August 2012</cite>
 <p>[CSS Cascading Variables is] a family of custom author-defined properties known collectively as <strong>custom properties</strong>, which allow an author to assign arbitrary values to a property with an author-chosen name, and <strong>variables</strong>, which allow an author to then use those values in other properties elsewhere in the document.</p>
 <p>First requested in <em>1998</em>, first W3C proposal: <em><a href="http://disruptive-innovations.com/zoo/cssvariables/">2008</a></em>, first public draft <em><a href="http://www.w3.org/TR/2012/WD-css-variables-20120410/">April 2012</a></em></p>
-</section>
-
-<section class="slide">
-	<h2>Why do we need these things?</h2>
-	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
-	<p><a href="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"><em>Dilbert.com</em></a></p>
-	<!--
-	<p>How can people possibly fit all this into their heads if they're expected to do things faster, more efficiently, and keep their sanity.</p>
-	<p>The technology that solves all these problems and more, is CSS pre-processors</p>
--->
+<!-- Focus on the fact that it has taken a decade to even be realised in a draft, and 4 years to get to it's first public draft, which then changed wholesale 4 months later -->
 </section>
 
 <section class="slide">
@@ -215,6 +217,16 @@
 <section class="slide">
 	<h2>How much code?</h2>
 	<img src="images/bbcnewsgraph-js.png" alt="Graph of the previous slide">
+</section>
+
+<section class="slide">
+	<h2>Why do we need these things?</h2>
+	<p><img src="images/514.strip.gif" style="width:75%;" alt="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"></p>
+	<p><a href="http://dilbert.com/dyn/str_strip/000000000/00000000/0000000/000000/00000/0000/500/514/514.strip.gif"><em>Dilbert.com</em></a></p>
+	<!--
+	<p>How can people possibly fit all this into their heads if they're expected to do things faster, more efficiently, and keep their sanity.</p>
+	<p>The technology that solves all these problems and more, is CSS pre-processors</p>
+-->
 </section>
 
 <section class="slide">
@@ -500,13 +512,8 @@ ul $li p {
 
 <section class="slide">
 	<h2>Minimal CSS</h2>
-	If you've got a page that only needs certain parts of the CSS, give them that stylesheet only.
-	Mobile site? only give them the mobile styles but keep the vars and mixins
-</section>
-
-<section class="slide">
-	<h2>Object-Oriented CSS</h2>
-	<p style="text-align:center"><img src="images/smaccs_logo.png" alt="SMACCS"/><a href="http://smacss.com/">smacss.com</a> - A great e-book on Object-Oriented CSS by <a href="http://snook.ca/">Jonathan Snook</a></p>
+	<p>If you've got a page that only needs certain parts of the CSS, give them that stylesheet only.
+	Mobile site? only give them the mobile styles but keep the vars and mixins</p>
 </section>
 
 <section class="slide">
@@ -755,8 +762,23 @@ $value: 1.5;
 
 <section class="slide">
 	<div class="vcenter">
-		<h2>Is one better than the other?</h1>
-		<h1 class="slide">Yes, but don't think like that</h2>
+		<h2>Is one better than the other?</h2>
+		<h1 class="slide">Yes, but don't think like that</h1>
+	</div>
+</section>
+<section class="slide">
+	<h2>Is one better than the other?</h2>
+	<div class="leftThreeCol">
+		<h3>Sass</h3>
+		<p><img src="images/ferrari-458.jpg" alt="Sass - a Ferrari 458" style="box-sizing:border-box; padding: 10px;"></p>
+	</div>
+	<div class="middleThreeCol">
+		<h3>Less</h3>
+		<p><img src="images/porsche-911.jpg" alt="Less - a Porsche 911" style="box-sizing:border-box; padding: 10px;"></p>
+	</div>
+	<div class="rightThreeCol">
+		<h3>CSS</h3>
+		<p><img src="images/lada.gif" alt="CSS - a Lada" style="box-sizing:border-box; padding: 10px;"></p>
 	</div>
 </section>
 
@@ -772,11 +794,14 @@ $value: 1.5;
 	<h3>Command line</h3>
 	<div class="leftCol">
 		<h4>Less</h4>
-		<pre><code>npm install -g less</code></pre>
+		<pre><code>npm install -g less
+lessc style.less style.css</code></pre>
 	</div>
 	<div class="rightCol">
 		<h4>Sass</h4>
-		<pre><code>gem install sass</code></pre>
+		<pre><code>gem install sass
+gem install compass
+sass --watch style.scss:style.css</code></pre>
 	</div>
 	<div style="clear:both;"></div>
 	<div class="slide">
@@ -847,15 +872,14 @@ wp_enqueue_style( 'style', get_stylesheet_directory_uri() . '/style.scss' );</co
 <section class="slide">
 	<h2>Get Started - Tools</h2>
 	<div class="leftThreeCol">
-		<figure><div style="height:400px"><img src="images/yeoman-logo.png"></div><figcaption><a href="http://yeoman.io">Yeoman</a></figcaption></figure>
-	</div>
-	<div class="middleThreeCol">
-		<figure><div style="height:400px"><img src="images/codekit-logo.png"></div><figcaption><a href="http://incident57.com/codekit/">Code Kit</a></figcaption></figure>
-	</div>
-	<div class="rightThreeCol">
 		<figure><div style="height:400px"><img src="images/grunt-logo.png"></div><figcaption><a href="http://gruntjs.com/">Grunt</a></figcaption></figure>
 	</div>
-	
+	<div class="middleThreeCol">
+		<figure><div style="height:400px"><img src="images/yeoman-logo.png"></div><figcaption><a href="http://yeoman.io">Yeoman</a></figcaption></figure>
+	</div>
+	<div class="rightThreeCol">
+		<figure><div style="height:400px"><img src="images/codekit-logo.png"></div><figcaption><a href="http://incident57.com/codekit/">Code Kit</a></figcaption></figure>
+	</div>
 </section>
 
 <section class="slide">
